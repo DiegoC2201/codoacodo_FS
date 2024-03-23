@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+</head>
+<body>
+    <!--Encabezado-->
+    <header>
+        <!-- Logo -->
+        <div>
+            <a href="/"><span>Pelo y Barba</span></a>
+        </div>
+    </header>
+
+    <!--Contenido-->
+    <main>
+        <!-- form-wrapper: Formulario -->
+        <section id="form-wrapper">
+            <h2>Consultas</h2>
+            <form action="#" id="formregister" method="GET" novalidate>
+                <!--Nombre-->
+                <div class="form-control">
+                    <label for="firstname">Nombre</label>
+                    <input type="text" name="firstname" id="firstname" required>
+                </div>
+                <div class="error" id="error-firstname"></div>
+                <!--Apellido-->
+                <div class="form-control">
+                    <label>Apellido</label>
+                    <input type="text" name="lastname" id="lastname" required>
+                </div>
+                <div class="error" id="error-lastname"></div>
+                <!--Email-->
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="error" id="error-email"></div>
+                <!--Tipo de consulta-->
+                <div class="form-control">
+                    <label>Tipo de Consulta</label><br>
+                    <select name="tipoconsulta" id="tipoconsulta" class="form-select" required>
+                        <option value="">...</option>
+                        <option value="S">Servicio</option>
+                        <option value="P">Productos</option>
+                        <option value="O">Otra consulta</option>
+                    </select>                   
+                </div>
+                <!--Tipo de servicio-->
+                <!--Esta sección debería aparecer únicamente si el cliente selecciona "Servicio" en el desplegable anterior-->
+                <div class="form-control">
+                    <div class="servicio">
+                        <label>Tipo de Servicio</label><br>
+                        <input type="checkbox" name="opcion" value="B">Baño<br>
+                        <input type="checkbox" name="opcion" value="C">Corte<br>
+                        <input type="checkbox" name="opcion" value="D">Desparacitado<br>
+                        <input type="checkbox" name="opcion" value="P">Paticure<br>
+                    </div>
+                </div>
+                <!--Verificación de si ya es cliente-->
+                <div class="form-control">
+                    <div class="cliente">
+                        <label>Ya es cliente?</label> <!--Ver dónde corresponde poner el requierd acá-->
+                        <input type="radio" name="opcion" value="1">Sí
+                        <input type="radio" name="opcion" value="0">No
+                    </div>
+                </div>
+                <!--Espacio para la consulta-->
+                <div class="form-control">
+                    <div class="consulta">
+                        <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Escribe tu consulta"></textarea>
+                    </div>
+                </div>
+                <!--Botón de envío-->
+                <button type="submit">Enviar consulta</button>
+                <div class="form-help">
+                    <a href="#">Necesitás ayuda?</a>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!--Pie-->
+    <footer>
+
+    </footer>
+</body>
+</html>
