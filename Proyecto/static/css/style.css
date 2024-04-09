@@ -36,6 +36,7 @@ a {
     padding: 10px;
     font-size: 1.5vw;
     width: 100%;
+    height: 80px; /* Altura del encabezado */
     z-index: 9999;
 }
 
@@ -43,6 +44,11 @@ a {
     display: flex;
     align-items: center;
     color: var(--primary-color);
+}
+
+#logo > a {
+    font-size: 1.5rem;
+    color: black;
 }
 
 #img-logo {
@@ -71,9 +77,10 @@ nav > ul > li > a:hover {
 }
 
 #banner{
-    background-image: url(../img/banner-cambiar.jpg);
-    background-size: cover;
-    background-position:center;
+    background-image: url(../img/banner-1.jpeg);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
     height: 600px;
     margin-top: 80px;
     /*box-shadow:inset 0 0 0 2000px rgba(84,84,84,0.5);*/
@@ -112,10 +119,10 @@ h1 {
     background-image: url(##);
     background-size: cover;
     background-position: center;
-    height: auto;
+    height: 600px;
     box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
-    padding: 10px;
-    margin: 20px 0px ;
+    padding: 90px 10px;
+    margin: 20px 0px;
 }
 
 .button{
@@ -125,3 +132,45 @@ h1 {
     color: #fff;
     cursor: pointer; /*Cambia el cursor a una manito cuando estoy sobre el botón*/
 }
+
+.caja-testimonios > h2 {
+    text-align: center;
+    font-size: 3.5vw;
+}
+
+.caja-testimonios > p {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.contenedor-testimonios {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 60px;
+}
+
+.testimonio {
+    width: 22%;
+    text-align: center;
+    line-height: 1.5rem;
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.5);
+    background-color: #fff; 
+    padding: 20px;           
+}
+
+.testimonio {
+    transition: transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+  
+.testimonio:hover {
+    transform: translateY(-25px);
+}
+
+.testimonio-img {
+    width: 40%;
+    border-radius: 50%;
+    margin-top: -50px;
+}
+  
