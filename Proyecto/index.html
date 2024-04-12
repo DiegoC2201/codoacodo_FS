@@ -49,29 +49,23 @@
             </div>
         </section>
         
-        <section id="nosotros">
+        <section id="nosotros"><a name="nosotros"></a>
             <!-- División contenedora-->
-            <div>
-                <div class="Nosotros">
-                    <!-- imagen -->
-                    <img src="static/img/corte-pelo.jpg" alt="Estilista peinando perro" class="nosotros-img" height="400"></a>
-                    <div class="nosotros-text">
-                        <h2><a name="nosotros" >Nosotros</a></h2>
-                        <p>Desde 2024 <i>Pelo y Barba</i> brinda la mejor atención estética para tu mascota. Cuenta para ello con los mejores
-                        profesionales, quienes continúan en capacitación y formación constante, para brindarles la más cálida atención y
-                        lidiar no solo con los perros (que es lo más fácil), sino también con sus dueños. </p>
-                        <button type="button" class="button">Conocenos</button> <!--Redireccionaría a una página distinta-->
-                    </div>
-                    
-                </div>
-                
+            <div class="Nosotros">
+                <!-- imagen -->
+                <img src="static/img/corte-pelo.jpg" alt="Estilista peinando perro" class="nosotros-img" height="400"></a>
+                <div class="nosotros-text">
+                    <h2>Nosotros</h2>
+                    <p>Desde 2024 <i>Pelo y Barba</i> brinda la mejor atención estética para tu mascota. Cuenta para ello con los mejores profesionales, quienes continúan en capacitación y formación constante, para brindarles la más cálida atención y lidiar no solo con los perros (que es lo más fácil), sino también con sus dueños. </p>
+                    <button type="button" class="button">Conocenos</button> <!--Redireccionaría a una página distinta-->
+                </div>               
             </div>
         </section>
     
-        <section id="servicios">
+        <section id="servicios"><a name="servicios"></a>
             <!-- División contenedora-->
             <div>
-                <h2><a name="servicios">Servicios</a></h2>
+                <h2>Servicios</h2>
                 <ul> 
                     <li>Corte</li>
                     <li>Baño</li>
@@ -83,30 +77,32 @@
             </div>
         </section>
            
-        <section id="productos">
+        <section id="productos"><a name="productos"></a>
             <!-- División contenedora-->
             <div>
-                <h2><a name="productos">Productos</a></h2>
-                <p>Nuestros best-sellers del mes</p>
-                <div>
+                <div id="encabezado-prod-flex">
+                    <h2>Productos</h2>
+                    <p>Nuestros best-sellers del mes</p>
+                    <button type="button" class="button">Conocé todos nuestros productos</button> <!--Redireccionaría a una página distinta con todos los productos-->
+                </div>
+                <div class="products-flex">
                     <!-- División para los detalles del producto1: un espacio para la imagen y otro para la tabla con la información-->
-                    <div id="producto1">
+                    <div class="producto-x" id="producto1">
                         <!-- imagen -->
                         <div>
-                            <a href="./templates/detalle-producto.html" target="_blank" rel="noopener noreferrer"><img src="static/img/Ejemplo-Alimento.png" alt="Royal-Canin-MiniAdult" height="200"></a>
+                            <a href="./templates/detalle-producto.html" target="_blank" rel="noopener noreferrer"><img src="static/img/Ejemplo-Alimento.png" alt="Royal-Canin-MiniAdult" class="producto-img"></a>
                         </div>
                         <!-- Tabla con información-->
-                        <div>
+                        <div class="detalle-producto">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th colspan="2">Info</th>
+                                        <th colspan="2"><strong>Royal Canin</strong></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><strong>Marca</strong></td>
-                                        <td>Royal Canin</td>
+                                        <th colspan="2">MINI Adult</th>
                                     </tr>
                                     <tr>
                                         <td><strong>Tamaño</strong></td>
@@ -122,26 +118,123 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <button type="button" class="button">Comprar</button>
+                                           
                         </div>
+                        <button type="button" class="button">Comprar</button>      
                     </div>
                     <!-- División para los detalles del producto2: un espacio para la imagen y otro para la tabla con la información-->
-                    <div id="producto2">
-                        <!--Habría que rellenarlo después-->
+                    <div class="producto-x" id="producto2">
+                        <!-- imagen -->
+                        <div>
+                            <a href="./templates/detalle-producto.html" target="_blank" rel="noopener noreferrer"><img src="static/img/Royal-Puppy.png" alt="Royal-Canin-Puppy" class="producto-img"></a>
+                        </div>
+                        <!-- Tabla con información-->
+                        <div class="detalle-producto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><strong>Royal Canin</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">MINI Puppy</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tamaño</strong></td>
+                                        <td>XX Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Antes</strong></td>
+                                        <td>$X.XXX</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ahora</strong></td>
+                                        <td>$X.XXX</td>
+                                    </tr>
+                                </tbody>
+                            </table>                            
+                        </div>
+                        <button type="button" class="button">Comprar</button>
                     </div>
                     <!-- División para los detalles del producto3: un espacio para la imagen y otro para la tabla con la información-->
-                    <div id="producto3">
-                        <!--Habría que rellenarlo después-->
+                    <div class="producto-x" id="producto3">
+                        <!-- imagen -->
+                        <div>
+                            <a href="./templates/detalle-producto.html" target="_blank" rel="noopener noreferrer"><img src="static/img/Royal-Giant.png" alt="Royal-Canin-Giant" class="producto-img"></a>
+                        </div>
+                        <!-- Tabla con información-->
+                        <div class="detalle-producto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><strong>Royal Canin</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">GIANT</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tamaño</strong></td>
+                                        <td>XX Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Antes</strong></td>
+                                        <td>$X.XXX</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ahora</strong></td>
+                                        <td>$X.XXX</td>
+                                    </tr>
+                                </tbody>
+                            </table>                            
+                        </div>
+                        <button type="button" class="button">Comprar</button>
+                    </div>
+                    <!-- División para los detalles del producto4: un espacio para la imagen y otro para la tabla con la información-->
+                    <div class="producto-x" id="producto4">
+                        <!-- imagen -->
+                        <div>
+                            <a href="./templates/detalle-producto.html" target="_blank" rel="noopener noreferrer"><img src="static/img/Royal-Medium" alt="Royal-Canin-Medim" class="producto-img"></a>
+                        </div>
+                        <!-- Tabla con información-->
+                        <div class="detalle-producto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2"><strong>Royal Canin</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">MEDIUM +7</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tamaño</strong></td>
+                                        <td>XX Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Antes</strong></td>
+                                        <td>$X.XXX</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ahora</strong></td>
+                                        <td>$X.XXX</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="button">Comprar</button>    
                     </div>
                 </div>
-                <button type="button" class="button">Conocé todos nuestros productos</button> <!--Redireccionaría a una página distinta con todos los productos-->
             </div>
         </section>
             
-        <section id="testimonios">
+        <section id="testimonios"><a name="testimonios"></a>
             <!-- División contenedora-->
             <div class="caja-testimonios">
-                <h2><a name="testimonios">Testimonios</a></h2>
+                <h2>Testimonios</h2>
                 <p>Lo que nuestros clientes dicen de nosotros:</p>
                 <div class="contenedor-testimonios">
                     <div class="testimonio">
@@ -177,10 +270,10 @@
             </div>
         </section>
     
-        <section id="contacto">
+        <section id="contacto"><a name="contacto"></a>
             <!-- División contenedora-->
             <div>
-                <h2><a name="contacto">Contacto</a></h2>
+                <h2>Contactacto</h2>
                 <p>Todavía tenés dudas? <a href="templates/formulario.html"><button type="button" class="button">Escribinos</button></p></a>
                 <p>O vení a conocernos!</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13139.058517534007!2d-58.393176!3d-34.5848217!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaa1eb4e7ad1%3A0x8bcb7db37f6f9421!2sPlaza%20Francia!5e0!3m2!1ses-419!2sar!4v1710198299261!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
