@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../static/favicon/logo.ico" type="image/x-icon">
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Pelo y Barba - Productos</title>
 </head>
+    
 <body>
     <!--Encabezado-->
-    <header>
+    <header class="header">
         <!-- Logo -->
-        <div>
-            <a href="/"><span>Pelo y Barba</span></a>
+        <div id="logo">
+            <img id="img-logo" src="../static/img/logo.png" alt="logo">
+            <a href="index.html"><span>Pelo y Barba</span></a>
         </div>
         <!-- Hipervínculos para el menú-->
         <!-- También pienso que podemos decidir que se abra en una nueva solapa en blanco y en ese caso prescindir del menú de navegación-->
@@ -27,33 +38,43 @@
     
     <!--Contenido-->
     <main>
-        <section id="detalleproducto1">
+        <section id="detalleproducto">
             <!-- División contenedora-->
             <div>
+                <h2> Royal Canin - Mini Adult - 7,5 Kg </h2>
                 <!-- División para los detalles del producto: un espacio para la imagen y otro para la descripcion-->
-                <div>
+                <div class="detalle-flex">
                     <!-- imagen -->
-                    <div>
-                        <img src="../static/img/Ejemplo-Alimento.png" alt="Royal-Canin-MiniAdult" height="200">
+                    <div class="producto-x">
+                        <img src="../static/img/Ejemplo-Alimento.png" alt="Royal-Canin-MiniAdult" class="producto-img">
                     </div>
                     <!-- Descripción-->
-                    <div>
-                        <!-- Información -->
-                        <div>
-                            <h2>Royal Canin para Perro Mini Adulto <span>7,5 Kg</span></h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-                         </div>
-                        <!-- Precio "Antes" -->
-                        <div>
-                            <h3>Antes</h3>
-                            <p>$45.250</p>
-                        </div>
-                        <!-- Precio "Ahora" -->
-                        <div>
-                            <h3>Ahora</h3>
-                            <p>$38.462</p>
-                        </div>
-                    <button type="button">Comprar</button>
+                    <div class="descripcion">
+                        <h3>Descripción</h3>
+                        <br>
+                        <p>Alimento seco para perros adultos de talla pequeña (peso adulto hasta 10 kg). De 10 meses a 8 años de edad.</p>
+                        <br>
+                        <h4>Precio Antes:</h4>
+                        <p id="precio-antes">$45.250</p>
+                        <br>
+                        <h4>Precio Ahora:</h4>
+                        <p id="precio-ahora">$38.462</p>
+                    </div>
+                    <div class="beneficios">
+                        <h3>Beneficios</h3>
+                            <br>
+                            <h4>Energía adaptada</h4>
+                            <p>Ayuda a mantener un peso saludable en perros de talla pequeña, cubriendo sus elevadas necesidades energéticas, gracias al aporte de L-carnitina que ayuda a promover el metabolismo graso.</p>
+                            <br>
+                            <h4>Palatabilidad reforzada</h4>
+                            <p>Satisface el apetito caprichoso de los perros de talla pequeña gracias a su fórmula y una selección de aromas exclusivos.</p>
+                            <br>
+                            <h4>Calidad del pelaje</h4>
+                            <p>Esta fórmula contiene nutrientes que ayuda a mantener una piel y un pelaje saludable. Enriquecido con EPA & DHA.</p>
+                    </div>
+                    <div class="botones-compra">
+                        <button type="button" class="button">Agregar al carrito</button>
+                        <button type="button" class="button">Ver otros productos</button>
                     </div>
                 </div>
             </div>
