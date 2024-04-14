@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/form.css">
     <title>Consultas</title>
 </head>
 <body>
     <!--Encabezado-->
     <header>
         <!-- Logo -->
-        <div>
+        <div id="logo">
+            <img id="img-logo" src="../static/img/logo.png" alt="logo">
             <a href="../index.html"><span>Pelo y Barba</span></a>
         </div>
     </header>
-
     <!--Contenido-->
-    <main>
+    <main class="container">
         <!-- form-wrapper: Formulario -->
         <section id="form-wrapper">
             <h2>Contacto</h2>
             <form action="#" id="formregister" method="GET" novalidate>
                 <!--Nombre-->
                 <div class="form-control">
-                    <label for="firstname">Nombre</label>
-                    <input type="text" name="firstname" id="firstname" required>
+                    <label for="firstname" >Nombre</label>
+                    <input type="text" name="firstname" id="firstname" required placeholder="Laura">
                 </div>
                 <div class="error" id="error-firstname"></div>
                 <!--Apellido-->
                 <div class="form-control">
                     <label>Apellido</label>
-                    <input type="text" name="lastname" id="lastname" required>
+                    <input type="text" name="lastname" id="lastname" required placeholder="Garcia">
                 </div>
                 <div class="error" id="error-lastname"></div>
                 <!--Email-->
                 <div class="form-control">
                     <label>Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" required placeholder="example@gmail.com">
                 </div>
                 <div class="error" id="error-email"></div>
                 <!--Tipo de consulta-->
@@ -76,13 +77,12 @@
                 <!--Botón de envío-->
                 <button type="submit">Enviar consulta</button>
                 <div class="form-help">
-                    <a href="#">Necesitás ayuda?</a>
+                    <a href="#">¿Necesitás ayuda?</a>
                 </div>
             </form>
         </section>
 
     </main>
-
     <!--Pie-->
     <footer>
 
