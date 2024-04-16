@@ -30,13 +30,12 @@ a {
 }
 
 .header {
-    background-color:   var(--bg-color) ;
+    background-color: var(--bg-color) ;
     position:fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
     padding: 10px;
     font-size: 1.5vw;
     width: 100%;
@@ -372,4 +371,58 @@ h2{
 .nosotros-text{
     margin-top: 10%;
     text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container-enlaces-footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-enlaces-footer > a {
+    color: black;
+}
+
+.legales {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.emlace-footer {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    font-size: 3vw;
+    padding: 10px;
+}
+
+.fa-location-dot {
+    color: firebrick;
+}
+
+.fa-whatsapp {
+    color: green;
+}
+
+.fa-instagram {
+    color: deeppink;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+#barra-vertical {
+    font-size: 3vw;
 }
