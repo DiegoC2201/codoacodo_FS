@@ -67,15 +67,37 @@
         <section id="servicios"><a name="servicios"></a>
             <!-- División contenedora-->
             <div>
-                <h2>Servicios</h2>
-                <ul> 
-                    <li>Corte</li>
-                    <li>Baño</li>
-                    <li>Limpieza de oídos</li>
-                    <li>Desparacitado</li>
-                    <li>Paticure</li>
-                </ul>
-                <a href="templates/formulario.html"><button type="button" class="button">Reservar turno</button></a> <!--Redireccionaría a una página distinta, pero seguro haya una funcionalidad del botón que permita hacer esto sin el <a></a> VER -->
+                <div id="texto-servicios">
+                    <h2>Servicios</h2>
+                    <p>La más amplia oferta del barrio</p>
+                </div>
+                <div id="contenido-servicios">
+                    <div id="opciones-servicio">
+                        <ul> 
+                            <li>Baño</li>
+                            <li>Corte</li>
+                            <li>Limpieza de oídos</li>
+                            <li>Desparacitado</li>
+                            <li>Paticure</li>
+                        </ul>
+                        <a href="templates/formulario.html"><button type="button" class="button">Reservar turno</button></a> <!--Redireccionaría a una página distinta, pero seguro haya una funcionalidad del botón que permita hacer esto sin el <a></a> VER -->
+                    </div>
+                    <div class="carrusel">  
+                        <div class="grande">
+                            <img src="./static/img/banio.jpg" alt="Baño">
+                            <img src="./static/img/unias.jpg" alt="Corte">
+                            <img src="./static/img/desparasitar.jpg" alt="Desparacitado">
+                            <img src="./static/img/pexels-mirko-fabian-12612095.jpg" alt="Uñas">
+                        </div>
+                        <!-- es para armar los puntos en el carrusel
+                        <ul class="puntos"> 
+                            <li class="punto" id="punto1"></li>
+                            <li class="punto" id="punto2"></li>
+                            <li class="punto" id="punto3"></li>
+                            <li class="punto" id="punto4"></li>
+                        </ul> -->
+                    </div>
+                </div>
             </div>
         </section>
            
@@ -85,7 +107,6 @@
                 <div id="encabezado-prod-flex">
                     <h2>Productos</h2>
                     <p>Nuestros best-sellers del mes</p>
-                    <button type="button" class="button">Conocé todos nuestros productos</button> <!--Redireccionaría a una página distinta con todos los productos-->
                 </div>
                 <div class="products-flex">
                     <!-- División para los detalles del producto1: un espacio para la imagen y otro para la tabla con la información-->
@@ -119,10 +140,9 @@
                                         <td>$38.462</td>
                                     </tr>
                                 </tbody>
-                            </table>
-                                           
+                            </table>              
                         </div>
-                        <button type="button" class="button">Comprar</button>      
+                        <!-- <button type="button" class="button">Comprar</button>       -->    
                     </div>
                     <!-- División para los detalles del producto2: un espacio para la imagen y otro para la tabla con la información-->
                     <div class="producto-x" id="producto2">
@@ -157,7 +177,7 @@
                                 </tbody>
                             </table>                            
                         </div>
-                        <button type="button" class="button">Comprar</button>
+                        <!-- <button type="button" class="button">Comprar</button> -->
                     </div>
                     <!-- División para los detalles del producto3: un espacio para la imagen y otro para la tabla con la información-->
                     <div class="producto-x" id="producto3">
@@ -192,7 +212,7 @@
                                 </tbody>
                             </table>                            
                         </div>
-                        <button type="button" class="button">Comprar</button>
+                        <!-- <button type="button" class="button">Comprar</button> -->
                     </div>
                     <!-- División para los detalles del producto4: un espacio para la imagen y otro para la tabla con la información-->
                     <div class="producto-x" id="producto4">
@@ -227,8 +247,11 @@
                                 </tbody>
                             </table>
                         </div>
-                        <button type="button" class="button">Comprar</button>    
+                        <!-- <button type="button" class="button">Comprar</button> -->    
                     </div>
+                </div>
+                <div id="boton-productos">
+                    <button type="button" class="button">Conocé todos nuestros productos</button> <!--Redireccionaría a una página distinta con todos los productos-->
                 </div>
             </div>
         </section>
