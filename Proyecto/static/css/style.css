@@ -200,7 +200,7 @@ h2{
 
 .carrusel > .grande{
     width: 400%;
-    
+    gap: 10px;
     display: flex;
     flex-flow: row nowrap; /*Atajo para resumir los valores de las propiedades flex-direction y flex-wrap*/
     justify-content:space-between;
