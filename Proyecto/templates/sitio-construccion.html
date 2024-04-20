@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Sitio en Construccion</h1>
+    <header class="header">
+        <!-- Logo -->
+        <div id="logo">
+            <img id="img-logo" src="../static/img/logo.png" alt="logo">
+            <a href="../index.html"><span>Pelo y Barba</span></a>
+        </div>
+    </header>
+    <main>
+        <section id="sitio-construccion">
+            <h1 id="construccion-titulo">Sitio en Construcción</h1>
+            <img src="../static/img/construccion.png" alt="Sitio en Construccón">
+            <p>Estamos trabajando para ofrecerte una mejor experiencia.</p>
+        </section>
+    </main>
+    <!--Pie-->
+    <footer>
+        <div class="container-enlaces-footer">
+            <a href="https://www.google.com/maps?ll=-34.584822,-58.393176&z=14&t=m&hl=es-419&gl=AR&mapclient=embed&cid=10073283201434883105"
+                target="_blank">
+                <div class="emlace-footer">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <p>Dónde estamos</p>
+                        <p>Av. del Libertador 1400</p>
+                        <p>CABA</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                <div class="emlace-footer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>+54911-1234-5678</p>
+                </div>
+            </a>
+            <a href="mailto:peloybarba@mail.com?Subject=Consulta">
+                <div class="emlace-footer">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>peloybarba@mail.com</p>
+                </div>
+            </a>
+            <div class="emlace-footer">
+                <p id="barra-vertical">|</p>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <div class="legales">
+            <p>© 2024 Todos los derechos reservados a Pelo y Barba</p>
+            <p>Política de Privacidad | Términos y Condiciones</p>
+        </div>
+    </footer>
 </body>
+
 </html>

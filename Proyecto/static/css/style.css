@@ -246,6 +246,10 @@ h2{
     gap: 8vw;
 }
 
+.products-flex a {
+    color: black;
+}
+
 .producto-x{
     border-radius: 20px;
     background-color: var(--secondary-color);
@@ -535,4 +539,25 @@ i {
 
 #barra-vertical {
     font-size: 3vw;
+}
+
+/* SITIO EN CONSTRUCCION */
+
+#sitio-construccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 4rem;
+    background-color: white;
+    padding: 90px 10px;
+    margin: 20px 0px;
+}
+
+#construccion-titulo {
+    font-size: 3rem;
+}
+
+#sitio-construccion p {
+    font-size: x-large;
 }
