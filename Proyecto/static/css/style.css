@@ -192,47 +192,55 @@ h2{
 }
 
 .carrusel{
-    width: 45%;
+    width: 40%;
     max-width: 120em;
     margin-top: 3em;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .carrusel > .grande{
-    width: 400%;
+    width: 500%;
     gap: 10px;
     display: flex;
     flex-flow: row nowrap; /*Atajo para resumir los valores de las propiedades flex-direction y flex-wrap*/
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
 
-    /* transition: all .5s ease;
-    transform: translateX(-25%); */
+    /*transition: all .5s ease;
+    transform: translateX(-20%);*/
 }
 
 .grande > img{
-    width: calc(100%/4 - 2em);
+    width: calc(100%/5 - 2em);
     min-height: 10vh;
     object-fit: auto;
     border-radius: 10px;;
 }
 
-/* .carrusel > .puntos{
-    width: 100%;
-    background-color: var(--secondary-color);
+.carrusel > .puntos{
+    width: 98%;
+    background-color: var(--third-bis-color));
+    border-radius: 10em;
     padding: .4em;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    list-style: none;
 }
 
 .puntos > .punto{
     width: 1em;
     height: 1em;
     margin: .5em;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
 
-} */
+}
+
+.carrusel .punto.activo{
+    background-color: var(--primary-color);
+}
 
 
 /*PRODUCTOS*/
