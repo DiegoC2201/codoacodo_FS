@@ -219,7 +219,7 @@ h2{
 
 .carrusel > .puntos{
     width: 98%;
-    background-color: var(--third-bis-color));
+    background-color: var(--third-bis-color);
     border-radius: 10em;
     padding: .4em;
     display: flex;
