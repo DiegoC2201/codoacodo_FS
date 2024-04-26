@@ -177,6 +177,7 @@ h2{
     border-color: #375a4f;
     border-width: medium;
     border-style: solid;    
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -219,7 +220,7 @@ h2{
 
 .carrusel > .puntos{
     width: 98%;
-    background-color: var(--third-bis-color);
+    background-color: transparent;
     border-radius: 10em;
     padding: .4em;
     display: flex;
@@ -326,14 +327,14 @@ h2{
 }
 
 #encabezado-prod-flex > p:hover {
-    animation: tilt-n-move-shaking 0.25s infinite;
+    animation: tilt-n-move-shaking 0.5s infinite;
 }
 
 @keyframes tilt-n-move-shaking {
     0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(5px, 5px) rotate(5deg); }
+    25% { transform: translate(3px, 3px) rotate(3deg); }
     50% { transform: translate(0, 0) rotate(0deg); }
-    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    75% { transform: translate(-3px, 3px) rotate(-3deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
 }
 
@@ -475,25 +476,7 @@ h2{
     margin-top: -50px;
 }
 
-/*NOSOTROS*/
 
-.Nosotros{
-    display: flex;
-    margin: 10px auto;
-    height: 90%;
-}
-
-.nosotros-img{
-    float: left;
-    border: 3px;  
-    border-radius: 10px;
-    margin-right: 10px; 
-}
-
-.nosotros-text{
-    margin-top: 10%;
-    text-align: center;
-}
 
 /* FOOTER */
 
@@ -660,4 +643,75 @@ button[type="submit"]:hover {
 
 .form-help a:hover {
     text-decoration: underline;
+}
+
+
+/*QUIENES SOMOS*/
+
+
+.nosotros-text > h2 {
+    text-align: center;
+    font-size: 3.5vw;
+}
+
+.nosotros-desarrollo {
+    margin: 1vw;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+
+.subtitulo {
+    text-align: center;
+    font-size: 3vw;
+    font-family: Caveat, sans-serif
+}
+
+.acordeon{  
+    max-width: 120em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.acordeon .bloque{
+    /* margin: 0 0 1em; */
+    padding: 1em;
+    display:flex;
+    flex-wrap: nowrap;
+
+}
+
+.acordeon .img-acordeon{
+    width: 14em;
+    height: 18em;
+    background-color: #fafafa;
+    /* padding: 0.5em; */
+    object-fit: cover;
+    border-color: #375a4f;
+    border-width: medium;
+    border-style: solid;  
+}
+
+.acordeon .contenido{
+    background-color: #fafafa;
+    width: 0px;
+    padding: 0em;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    display: flex; 
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    border-color: #375a4f;
+    border-width: medium;
+    border-style: solid hidden;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.acordeon .bloque:hover .contenido{
+    width: 10em;
 }
