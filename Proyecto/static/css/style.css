@@ -164,8 +164,6 @@ h2{
     gap: 5em;   
 }
 
-
-
 #opciones-servicio{
     background-color: #fafafa;
     height: 25vw;
@@ -178,7 +176,6 @@ h2{
     border-width: medium;
     border-style: solid;    
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-
 }
 
 #opciones-servicio > ul{
@@ -715,3 +712,66 @@ button[type="submit"]:hover {
 .acordeon .bloque:hover .contenido{
     width: 10em;
 }
+
+/* FORMULARIO RESERVA DE TURNOS */
+#container-form-turnos {
+    background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+}
+
+#img-turno {
+    width: 30%;
+    transform: rotate(-10deg);
+    margin-top: 70px;
+}
+
+.nombres, .fecha-hora, .tel-mail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicio-fecha-hora {
+    display: flex;
+}
+
+.fecha-hora {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 85px;
+    margin-top: -12px;
+}
+
+.form-control input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.form-control-servicios {
+    line-height: 2rem;
+}
+
+.tipo-servicio {
+    margin-right: 7px;
+}
+
+.form-control input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control-hora {
+    width: 100%;
+}
+
+
+
