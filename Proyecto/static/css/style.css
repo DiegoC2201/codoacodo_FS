@@ -669,6 +669,7 @@ button[type="submit"]:hover {
     padding: 1em;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .acordeon .bloque{
@@ -687,7 +688,7 @@ button[type="submit"]:hover {
     object-fit: cover;
     border-color: #375a4f;
     border-width: medium;
-    border-style: solid;  
+    border-style: solid;
 }
 
 .acordeon .contenido{
@@ -788,4 +789,25 @@ button[type="submit"]:hover {
     display: none;
 }
 
+
+.encabezado{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+.nota{
+    color: red;
+    font-size: 2vw;
+    width: fit-content;
+    transform: rotate(22deg);
+    padding: 0.5em;
+    margin-right: 1em;
+    background-color: #fafafa;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    z-index: 9999;
+}
 
