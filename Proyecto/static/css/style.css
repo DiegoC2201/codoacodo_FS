@@ -739,8 +739,8 @@ button[type="submit"]:hover {
 .fecha-hora {
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 85px;
-    margin-top: -12px;
+    margin-left: 105px;
+    margin-top: -15px;
 }
 
 .form-control input[type="tel"] {
@@ -773,5 +773,19 @@ button[type="submit"]:hover {
     width: 100%;
 }
 
+/* DIVS ERROR */
+.error {
+    color: red;
+    padding: 5px;
+    text-wrap: wrap;
+}
+
+#form-exitoso {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px;
+    display: none;
+}
 
 

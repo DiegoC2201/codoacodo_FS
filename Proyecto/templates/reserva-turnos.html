@@ -42,35 +42,36 @@
     <main>
         <section id="container-form-turnos">
             <img src="../static/img/tarjeta-cita.png" alt="calendario" id="img-turno">
-            <form action="#" id="form-wrapper" method="GET" novalidate>
+            <form action="#" id="form-wrapper" method="GET" novalidate onsubmit="return validar();">
                 <h2>Reservá tu turno</h2>
                 <div class="nombres">
                     <!--Nombre del dueño-->
                     <div class="form-control">
                         <label for="nombre-dueno">Nombre del dueño</label>
                         <input type="text" name="nombre-dueno" id="nombre-dueno" required placeholder="Laura">
+                        <div class="error" id="error-nombre-dueno"></div>
                     </div>
-                    <div class="error" id="error-nombre-dueno"></div>
                     <!--Nombre de la mascota-->
                     <div class="form-control">
                         <label>Nombre de la mascota</label>
                         <input type="text" name="nombre-mascota" id="nombre-mascota" required placeholder="Toby">
+                        <div class="error" id="error-nombre-mascota"></div>
                     </div>
-                    <div class="error" id="error-nombre-mascota"></div>
                 </div>
                 <div class="tel-mail">
                     <!--Telefono-->
                     <div class="form-control">
                         <label>Telefono</label>
                         <input type="tel" name="telefono" id="telefono" required placeholder="1512345678">
+                        <div class="error" id="error-tel"></div>
                     </div>
-                    <div class="error" id="error-tel"></div>
                     <!--Email-->
                     <div class="form-control">
                         <label>Email</label>
                         <input type="email" name="email" id="email" required placeholder="example@gmail.com">
+                        <div class="error" id="error-email"></div>
                     </div>
-                    <div class="error" id="error-email"></div>
+                    
                 </div>
                 <div class="servicio-fecha-hora">
                     <!--Tipo de servicio-->
@@ -82,12 +83,14 @@
                         <input type="checkbox" name="servicio" id="desparasitado"
                             class="tipo-servicio">Desparasitado<br>
                         <input type="checkbox" name="servicio" id="paticure" class="tipo-servicio">Paticure<br>
+                        <div class="error" id="error-servicio"></div>
                     </div>
                     <div class="fecha-hora">
                         <!--Fecha-->
                         <div class="form-control">
                             <label for="fecha">Fecha</label>
                             <input type="date" name="fecha" id="fecha">
+                            <div class="error" id="error-fecha"></div>
                         </div>
                         <!--Hora-->
                         <div class="form-control form-control-hora">
@@ -103,6 +106,7 @@
                                 <option value="15">15 hs</option>
                                 <option value="16">16 hs</option>
                             </select>
+                            <div class="error" id="error-hora"></div>
                         </div>
                     </div>
                 </div>
@@ -111,6 +115,7 @@
                 <div class="form-help">
                     <a href="#">¿Necesitás ayuda?</a>
                 </div>
+                <div id="form-exitoso"></div>
             </form>
         </section>
     </main>
@@ -155,6 +160,7 @@
             <p>Política de Privacidad | Términos y Condiciones</p>
         </div>
     </footer>
+    <script src="../static/js/validaciones-form-turnos.js"></script>
 </body>
 
 </html>
