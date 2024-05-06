@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <!--Hoja de estilos-->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pelo y Barba</title>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <div id="logo">
+            <img id="img-logo" src="../static/img/logo.png" alt="logo">
+            <a href="../index.html"><span>Pelo y Barba</span></a>
+        </div>
+        <!-- Hipervínculos para el menú-->
+        <nav class="nav-oculta">
+            <ul>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="container-form-turnos">
+            <img src="../static/img/tarjeta-cita.png" alt="calendario" id="img-turno">
+            <form action="#" id="form-wrapper" method="GET" novalidate>
+                <h2>Reservá tu turno</h2>
+                <div class="nombres">
+                    <!--Nombre del dueño-->
+                    <div class="form-control">
+                        <label for="nombre-dueno">Nombre del dueño</label>
+                        <input type="text" name="nombre-dueno" id="nombre-dueno" required placeholder="Laura">
+                    </div>
+                    <div class="error" id="error-nombre-dueno"></div>
+                    <!--Nombre de la mascota-->
+                    <div class="form-control">
+                        <label>Nombre de la mascota</label>
+                        <input type="text" name="nombre-mascota" id="nombre-mascota" required placeholder="Toby">
+                    </div>
+                    <div class="error" id="error-nombre-mascota"></div>
+                </div>
+                <div class="tel-mail">
+                    <!--Telefono-->
+                    <div class="form-control">
+                        <label>Telefono</label>
+                        <input type="tel" name="telefono" id="telefono" required placeholder="1512345678">
+                    </div>
+                    <div class="error" id="error-tel"></div>
+                    <!--Email-->
+                    <div class="form-control">
+                        <label>Email</label>
+                        <input type="email" name="email" id="email" required placeholder="example@gmail.com">
+                    </div>
+                    <div class="error" id="error-email"></div>
+                </div>
+                <div class="servicio-fecha-hora">
+                    <!--Tipo de servicio-->
+                    <div class="form-control form-control-servicios">
+                        <label for="servicio">Servicio</label>
+                        <input type="checkbox" name="servicio" id="banio" class="tipo-servicio">Baño<br>
+                        <input type="checkbox" name="servicio" id="corte" class="tipo-servicio">Corte<br>
+                        <input type="checkbox" name="servicio" id="oidos" class="tipo-servicio">Limpieza de oídos<br>
+                        <input type="checkbox" name="servicio" id="desparasitado"
+                            class="tipo-servicio">Desparasitado<br>
+                        <input type="checkbox" name="servicio" id="paticure" class="tipo-servicio">Paticure<br>
+                    </div>
+                    <div class="fecha-hora">
+                        <!--Fecha-->
+                        <div class="form-control">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" name="fecha" id="fecha">
+                        </div>
+                        <!--Hora-->
+                        <div class="form-control form-control-hora">
+                            <label for="hora">Hora</label>
+                            <select name="hora" id="hora">
+                                <option value="">--Seleccione un horario--</option>
+                                <option value="9">9 hs</option>
+                                <option value="10">10 hs</option>
+                                <option value="11">11 hs</option>
+                                <option value="12">12 hs</option>
+                                <option value="13">13 hs</option>
+                                <option value="14">14 hs</option>
+                                <option value="15">15 hs</option>
+                                <option value="16">16 hs</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--Botón de envío-->
+                <button type="submit">Reservar turno</button>
+                <div class="form-help">
+                    <a href="#">¿Necesitás ayuda?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!--Pie-->
+    <footer>
+        <div class="container-enlaces-footer">
+            <a href="https://www.google.com/maps?ll=-34.584822,-58.393176&z=14&t=m&hl=es-419&gl=AR&mapclient=embed&cid=10073283201434883105"
+                target="_blank">
+                <div class="emlace-footer">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <p>Dónde estamos</p>
+                        <p>Av. del Libertador 1400</p>
+                        <p>CABA</p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                <div class="emlace-footer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <p>+54911-1234-5678</p>
+                </div>
+            </a>
+            <a href="mailto:peloybarba@mail.com?Subject=Consulta">
+                <div class="emlace-footer">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>peloybarba@mail.com</p>
+                </div>
+            </a>
+            <div class="emlace-footer">
+                <p id="barra-vertical">|</p>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+        <div class="legales">
+            <p>© 2024 Todos los derechos reservados a Pelo y Barba</p>
+            <p>Política de Privacidad | Términos y Condiciones</p>
+        </div>
+    </footer>
+</body>
+
+</html>

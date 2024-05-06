@@ -54,16 +54,52 @@
         <section id="nosotros"><a name="nosotros"></a>
             <!-- División contenedora-->
             <div class="Nosotros">
-                <!-- imagen -->
-                <img src="static/img/corte-pelo.jpg" alt="Estilista peinando perro" class="nosotros-img" height="400"></a>
                 <div class="nosotros-text">
-                    <h2>Nosotros</h2>
-                    <p>Desde 2024 <i>Pelo y Barba</i> brinda la mejor atención estética para tu mascota. Cuenta para ello con los mejores profesionales, quienes continúan en capacitación y formación constante, para brindarles la más cálida atención y lidiar no solo con los perros (que es lo más fácil), sino también con sus dueños. </p>
-                    <!--Redireccionaría a una página distinta-->
-                    <a href="templates/sitio-construccion.html">
-                        <button type="button" class="button">Conocenos</button>
-                    </a>
-                </div>               
+                    <h2>Quienes somos</h2>
+                    <p class="subtitulo">Animate a conocernos</p>
+                    <p class="nosotros-desarrollo">Somos un grupo de profesionales que sabe tanto de atención estética para mascotas como de desarrollo de sitios web, pero que continúan en capacitación y formación constante, para brindarte la más cálida atención y lidiar no solo con los perros (que es lo más fácil), sino también con sus dueños.</p>
+                </div>
+                <div class="acordeon">
+                    <div class="bloque">
+                        <img src="./static/img/logo.png" class="img-acordeon" alt="imagen-logo">
+                        <div class="contenido">En <b>Pelo y Barba</b> le hacemos honor a nuestro nombre. <br><br><b>Conocenos!</b></div>
+                    </div>
+                    <div class="bloque">
+                        <img src="./static/img/IMG-Diego.jpg" class="img-acordeon" alt="imagen-Diego">
+                        <div class="contenido"><b>Diego Castro</b><br> 38 años <br><br>Ingeniero industrial orientado a análisis de datos <br><br> Sin conocimientos previos de HTML, CSS y JS</div>
+                    </div>
+                    <div class="bloque">
+                        <img src="./static/img/IMG-Emilia.jpeg" class="img-acordeon" alt="imagen-Emi">
+                        <div class="contenido">
+                            <b>Emilia Poletti</b> 
+                            <br>42 años 
+                            <br><br>
+                            Psicóloga y estudiante autodidacta de programación. 
+                            <br><br>
+                            Con conocimientos de Desarrollo Web Fullstack JS y programación con Python.</div>
+                    </div>
+                    <div class="bloque">
+                        <img src="./static/img/IMG-Elias.jpeg" class="img-acordeon" alt="imagen-Sendo">
+                        <div class="contenido">
+                            <b>Salinas Elias</b>
+                            <br> 35 años <br>
+                            <br> Vigilador y estudiante de  full stack.<br>
+                            <br>Tengo conocimientos basicos de programacion <br>
+                        </div>
+                    </div>
+
+                    <div class="bloque">
+                        <img src="./static/img/Img-johana.jpg" class="img-acordeon" alt="imagen-Joha">
+                        <div class="contenido">
+                            <b>Johana Lescano</b> 
+                            <br>29 años 
+                            <br><br>
+                             Estudiante de programación y universitario en curso de Radiologia                           
+                            <br><br>
+                            Conocimientos basicos de programación en desarrollo web con javascript y React 
+                        </div>
+                    </div>
+                </div>           
             </div>
         </section>
     
@@ -80,10 +116,10 @@
                             <li>Baño</li>
                             <li>Corte</li>
                             <li>Limpieza de oídos</li>
-                            <li>Desparacitado</li>
+                            <li>Desparasitado</li>
                             <li>Paticure</li>
                         </ul>
-                        <a href="templates/sitio-construccion.html"><button type="button" class="button">Reservar turno</button></a> <!--Redireccionaría a una página distinta, pero seguro haya una funcionalidad del botón que permita hacer esto sin el <a></a> VER -->
+                        <a href="templates/reserva-turnos.html"><button type="button" class="button">Reservar turno</button></a> <!--Redireccionaría a una página distinta, pero seguro haya una funcionalidad del botón que permita hacer esto sin el <a></a> VER -->
                     </div>
                     <div class="carrusel">  
                         <div class="grande">
@@ -309,7 +345,6 @@
         </section>
     
         <section id="contacto"><a name="contacto"></a>
-            <!--<div class="consulta">
                 <!-- División contenedora-->
                 <div id="consulta-container">
                     <div class="box-mapa">        
@@ -324,45 +359,7 @@
                         <p>Nuestro personal resolvera todas tus dudas y consultas te ayudaran en lo que necesites, contamos con gente capacitada para darte una atencion personalizada sin compromiso </p>
                     </div>
                 </div>
-                <!-- 
-                    <div id="form-consulta">
-                        
-                        <form action="#" id="formconsulta" method="GET" novalidate>
-                          
-                            <div class="form-control">
-                                <label for="name" >Nombre</label>
-                                <input type="text" name="firstname" id="name" required placeholder="Laura">
-                            </div>
-                            <div class="error" id="error-name"></div>
-                           
-                            <div class="form-control">
-                                <label for="lastname" >Apellido</label>
-                                <input type="text" name="lastname" id="lastname" required placeholder="Garcia">
-                            </div>
-                            <div class="error" id="error-lastname"></div>
-                           
-                            <div class="form-control">
-                                <label>Email</label>
-                                <input type="email" name="email" id="email" required placeholder="example@gmail.com">
-                            </div>
-                            <div class="error" id="error-email"></div>
-                           
-                            <div>
-                                <label for="telefono">Telefono</label>
-                                <input type="number" name="telefono" id="telefono" required placeholder="11409138">
-                            </div>
-                            <div class="error" id="error-telefono"></div>
-                            <div class="form-control">
-                                <div class="consulta">
-                                    <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Escribe tu consulta"></textarea>
-                                </div>
-                            </div>   
-                                
-                            <button type="submit">Enviar</button>                  
-                        </form>
-                    </div>
-                -->
-            <!--</div>-->   
+               
         </section>
     </main>
     

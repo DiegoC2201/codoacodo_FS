@@ -34,13 +34,14 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+        
     </header>
     <!--Contenido-->
     <main id="container-form">
         <!-- form-wrapper: Formulario -->
         <section id="form-wrapper">
             <h2>Contacto</h2>
-            <form action="#" id="formregister" method="GET" novalidate>
+            <form action="#" id="formregister" method="GET" novalidate onsubmit="return validacion()"> 
                 <!--Nombre-->
                 <div class="form-control">
                     <label for="firstname" >Nombre</label>
@@ -63,7 +64,7 @@
                 <div class="form-control">
                     <label>Tipo de Consulta</label><br>
                     <select name="tipoconsulta" id="tipoconsulta" class="form-select" required>
-                        <option value="">...</option>
+                        <option value="0">...</option>
                         <option value="S">Servicio</option>
                         <option value="P">Productos</option>
                         <option value="O">Otra consulta</option>
@@ -95,7 +96,7 @@
                     </div>
                 </div>
                 <!--Botón de envío-->
-                <button type="submit">Enviar consulta</button>
+                <button type="submit" >Enviar consulta</button>
                 <div class="form-help">
                     <a href="#">¿Necesitás ayuda?</a>
                 </div>
@@ -143,5 +144,6 @@
             <p>Política de Privacidad | Términos y Condiciones</p>
         </div> 
     </footer>
+    <script src="../static/js/funciones-formulario.js"></script>
 </body>
 </html>
