@@ -717,6 +717,7 @@ button[type="submit"]:hover {
     padding: 1em;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .acordeon .bloque{
@@ -735,7 +736,7 @@ button[type="submit"]:hover {
     object-fit: cover;
     border-color: #375a4f;
     border-width: medium;
-    border-style: solid;  
+    border-style: solid;
 }
 
 .acordeon .contenido{
@@ -836,3 +837,28 @@ button[type="submit"]:hover {
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+
+.encabezado{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+.nota{
+    color: red;
+    font-size: 2vw;
+    width: fit-content;
+    transform: rotate(22deg);
+    padding: 0.5em;
+    margin-right: 1em;
+    background-color: #fafafa;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+>>>>>>> 7cae9b2a25c6ed9d0d3e6382560d970003fe6326
