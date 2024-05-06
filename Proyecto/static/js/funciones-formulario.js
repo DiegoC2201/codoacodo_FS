@@ -24,7 +24,8 @@ function validacion(){
             alert("Debe elegir un tipo de consulta!")
             return false;
         }
-    return true
+        
+        return true
 }
 
 
