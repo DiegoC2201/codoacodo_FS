@@ -1,3 +1,4 @@
+/* VARIABLES */
 :root{ 
     --bg-color:#aecedd; 
     --primary-color:#375a4f ;
@@ -7,7 +8,7 @@
     --bg-input-color:#;
 }
 
-
+/* ESTILOS GLOBALES */
 *{ 
     margin: 0;
     padding: 0; 
@@ -24,6 +25,19 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+/* ESTILOS COMUNES A TODAS LAS SECCIONES */
+#nosotros, #servicios, #productos, #testimonios, #contacto {
+    background-image: url(##);
+    background-size: cover;
+    background-position: center;
+    /*height: 600px;*/ 
+    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
+    padding: 90px 10px;
+    margin: 20px 0px;
+}
+
+/* HEADER */
 
 .header {
     background-color: var(--bg-color);
@@ -78,6 +92,8 @@ nav > ul > li > a:hover {
     visibility: hidden;
 }
 
+/* SECTION BANNER */ 
+
 #banner{
     background-image: url(../img/banner-1-ext.jpeg);
     background-size: cover;
@@ -110,7 +126,7 @@ h1 {
     font-weight: bold
 }
 
-h2{
+h2 {
     color: var(--primary-color);
     font-size: 2.5vw;
     font-weight: bold;
@@ -122,27 +138,78 @@ h2{
     font-size: 3.5vw;
     font-family: Caveat, sans-serif;
 }
-    
-#nosotros, #servicios, #productos, #testimonios, #contacto{
-    background-image: url(##);
-    background-size: cover;
-    background-position: center;
-    /*height: 600px;*/ 
-    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
-    padding: 90px 10px;
-    margin: 20px 0px;
+
+/* SECCION NOSOTROS*/
+
+.nosotros-text > h2 {
+    text-align: center;
+    font-size: 3.5vw;
 }
 
-.button{
-    background-color: var(--primary-color);
+.nosotros-desarrollo {
+    margin: 1vw;
+    text-align: center;
     font-size: 1.2vw;
-    padding: 10px; 
-    border-radius: 10px; /*redondea las esquinas -- Permite cambiar visualmente el contenedor a un círculo */
-    color: #fff;
-    cursor: pointer; /*Cambia el cursor a una manito cuando estoy sobre el botón*/
 }
 
-/*SERVICIOS*/
+
+.subtitulo {
+    text-align: center;
+    font-size: 3vw;
+    font-family: Caveat, sans-serif
+}
+
+.acordeon{  
+    max-width: 120em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.acordeon .bloque{
+    /* margin: 0 0 1em; */
+    padding: 1em;
+    display:flex;
+    flex-wrap: nowrap;
+
+}
+
+.acordeon .img-acordeon{
+    width: 14em;
+    height: 18em;
+    background-color: #fafafa;
+    /* padding: 0.5em; */
+    object-fit: cover;
+    border-color: #375a4f;
+    border-width: medium;
+    border-style: solid;
+}
+
+.acordeon .contenido{
+    background-color: #fafafa;
+    width: 0px;
+    padding: 0em;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    display: flex; 
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    border-color: #375a4f;
+    border-width: medium;
+    border-style: solid hidden;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.acordeon .bloque:hover .contenido{
+    width: 10em;
+}
+    
+/* SECTION SERVICIOS */
 
 #texto-servicios > h2 {
     text-align: center;
@@ -164,7 +231,7 @@ h2{
     gap: 5em;   
 }
 
-#opciones-servicio{
+#opciones-servicio {
     background-color: #fafafa;
     height: 25vw;
     width: 35vw;
@@ -187,6 +254,15 @@ h2{
     text-align:center;
     font-size: 2vw;
     margin: .4em;
+}
+
+.button{
+    background-color: var(--primary-color);
+    font-size: 1.2vw;
+    padding: 10px; 
+    border-radius: 10px; /*redondea las esquinas -- Permite cambiar visualmente el contenedor a un círculo */
+    color: #fff;
+    cursor: pointer; /*Cambia el cursor a una manito cuando estoy sobre el botón*/
 }
 
 .carrusel{
@@ -240,8 +316,155 @@ h2{
     background-color: var(--primary-color);
 }
 
+/* FORMULARIO RESERVA DE TURNOS */
+#container-form-turnos {
+    background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+}
 
-/*PRODUCTOS*/
+#img-turno {
+    width: 30%;
+    transform: rotate(-10deg);
+    margin-top: 70px;
+}
+
+.nombres, .fecha-hora, .tel-mail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicio-fecha-hora {
+    display: flex;
+}
+
+.fecha-hora {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 105px;
+    margin-top: -15px;
+}
+
+.form-control input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.form-control-servicios {
+    line-height: 2rem;
+}
+
+.tipo-servicio {
+    margin-right: 7px;
+}
+
+.form-control input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control-hora {
+    width: 100%;
+}
+
+/* DIVS ERROR */
+.error {
+    color: red;
+    padding: 5px;
+    text-wrap: wrap;
+}
+/* FORMULARIO RESERVA DE TURNOS */
+#container-form-turnos {
+    background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+}
+
+#img-turno {
+    width: 30%;
+    transform: rotate(-10deg);
+    margin-top: 70px;
+}
+
+.nombres, .fecha-hora, .tel-mail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.servicio-fecha-hora {
+    display: flex;
+}
+
+.fecha-hora {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 105px;
+    margin-top: -15px;
+}
+
+.form-control input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+.form-control-servicios {
+    line-height: 2rem;
+}
+
+.tipo-servicio {
+    margin-right: 7px;
+}
+
+.form-control input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-control-hora {
+    width: 100%;
+}
+
+/* DIVS ERROR */
+.error {
+    color: red;
+    padding: 5px;
+    text-wrap: wrap;
+}
+
+#form-exitoso {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px;
+    display: none;
+}
+#form-exitoso {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px;
+    display: none;
+}
+
+/* SECTION PRODUCTOS*/
 
 .products-flex{
     display: flex;
@@ -361,7 +584,27 @@ h2{
     order: 1;
 }
 
-/*HOJA DETALLE PRODUCTO*/
+/* PAGINA DETALLE PRODUCTO*/
+
+.encabezado{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.nota{
+    color: red;
+    font-size: 2vw;
+    width: fit-content;
+    transform: rotate(22deg);
+    padding: 0.5em;
+    margin-right: 1em;
+    background-color: #fafafa;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    z-index: 9999;
+}
 
 #detalleproducto{
     margin: 100px 15px 0px 15px;
@@ -429,7 +672,7 @@ h2{
     width: 10vw;
 }
 
-/*TESTIMONIOS*/
+/* SECTION TESTIMONIOS*/
 
 .caja-testimonios > h2 {
     text-align: center;
@@ -473,84 +716,49 @@ h2{
     margin-top: -50px;
 }
 
-
-
-/* FOOTER */
-
-footer {
-    width: 100vw;
-    height: 200px;
+/* SECTION CONTACTO */
+#contacto {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.container-enlaces-footer {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.container-enlaces-footer > a {
-    color: black;
-}
-
-.legales {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.emlace-footer {
-    display: flex;
-    align-items: center;
-}
-
-i {
-    font-size: 3vw;
-    padding: 10px;
-}
-
-.fa-location-dot {
-    color: firebrick;
-}
-
-.fa-whatsapp {
-    color: green;
-}
-
-.fa-instagram {
-    color: deeppink;
-}
-
-.fa-facebook {
-    color: blue;
-}
-
-#barra-vertical {
-    font-size: 3vw;
-}
-
-/* SITIO EN CONSTRUCCION */
-
-#sitio-construccion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    line-height: 4rem;
-    background-color: white;
-    padding: 90px 10px;
-    margin: 20px 0px;
+    align-items: center;
 }
 
-#construccion-titulo {
-    font-size: 3rem;
+#contacto-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
-#sitio-construccion p {
-    font-size: x-large;
+#consulta-container{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    max-width: 80%;
+    margin: 20px;
+    border: 3px solid var(--secondary-color);
+    box-shadow: inset 0 0 0 2000px whitesmoke;
 }
 
-/* FORMULARIO */
+.box-info{
+    text-align: center;
+    border: 3px solid var(--secondary-color);
+    box-shadow: inset  0 0 0 1000px hwb(201 55% 15%);
+    padding: 30px;
+    max-width: 45%;
+    line-height: 1.5rem;
+}
+
+.box-info button, h3 {
+    margin: 10px;
+}
+
+.box-mapa {
+    padding: 30px;
+    max-width: 50%;
+}
+
+/* FORMULARIO CONTACTO */
 
 #container-form {
     background-image: url(../img/background_formulario.png);
@@ -641,6 +849,7 @@ button[type="submit"]:hover {
 .form-help a:hover {
     text-decoration: underline;
 }
+
  /*Contacto (estos estilos los estaba aplicando para el formulario)
     #form-consulta{
     display: flex;
@@ -659,206 +868,79 @@ button[type="submit"]:hover {
    /* align-items: center; /* Centra los elementos verticalmente dentro de las celdas 
    */
 
-   /*estilos para la seccion contacto sin formulario*/
-#consulta-container{
+/* FOOTER */
+
+footer {
+    width: 100vw;
+    height: 200px;
     display: flex;
-    flex-direction:row-reverse;
-    flex-wrap: nowrap;
-    justify-content:space-evenly;
-    align-content:space-evenly; /*permite alinear respecto al eje secundario cuando tenemos más de una linea de elementos, pero el flex-wrap debe estar en wrap para que se aplique*/
-    justify-content:center;
-    align-items:center;
-    max-width: 100%;
-    margin:  20px;
-    border: 3px solid var(--secondary-color);
-    box-shadow: inset 0 0 0 2000px whitesmoke;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.box-mapa{
-    padding: 30px; ;
-}
-.box-info{
-    text-align:center;
-    text-wrap: wrap;
-    text-overflow:ellipsis ;/* para que el contenido cuando es cortado le avise al usuario mediante ...*/
-    border: 3px solid var(--secondary-color);
-    box-shadow: inset  0 0 0 1000px hwb(201 55% 15%);
-    padding: 30px;
-    max-width: 50%;
-}
-.box-info button, h3{
-    margin: 10px;
+.container-enlaces-footer {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-
-/*QUIENES SOMOS*/
-
-
-.nosotros-text > h2 {
-    text-align: center;
-    font-size: 3.5vw;
+.container-enlaces-footer > a {
+    color: black;
 }
 
-.nosotros-desarrollo {
-    margin: 1vw;
-    text-align: center;
-    font-size: 1.2vw;
+.legales {
+    display: flex;
+    justify-content: space-evenly;
 }
 
+.emlace-footer {
+    display: flex;
+    align-items: center;
+}
 
-.subtitulo {
-    text-align: center;
+i {
     font-size: 3vw;
-    font-family: Caveat, sans-serif
+    padding: 10px;
 }
 
-.acordeon{  
-    max-width: 120em;
-    padding: 1em;
+.fa-location-dot {
+    color: firebrick;
+}
+
+.fa-whatsapp {
+    color: green;
+}
+
+.fa-instagram {
+    color: deeppink;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+#barra-vertical {
+    font-size: 3vw;
+}
+
+/* SITIO EN CONSTRUCCION */
+
+#sitio-construccion {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.acordeon .bloque{
-    /* margin: 0 0 1em; */
-    padding: 1em;
-    display:flex;
-    flex-wrap: nowrap;
-
-}
-
-.acordeon .img-acordeon{
-    width: 14em;
-    height: 18em;
-    background-color: #fafafa;
-    /* padding: 0.5em; */
-    object-fit: cover;
-    border-color: #375a4f;
-    border-width: medium;
-    border-style: solid;
-}
-
-.acordeon .contenido{
-    background-color: #fafafa;
-    width: 0px;
-    padding: 0em;
-    overflow: hidden;
-    transition: all 0.7s ease;
-    display: flex; 
-    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     justify-content: center;
-    border-radius: 0px 10px 10px 0px;
-    border-color: #375a4f;
-    border-width: medium;
-    border-style: solid hidden;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-}
-
-.acordeon .bloque:hover .contenido{
-    width: 10em;
-}
-
-/* FORMULARIO RESERVA DE TURNOS */
-#container-form-turnos {
+    line-height: 4rem;
     background-color: white;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    padding: 90px 10px;
+    margin: 20px 0px;
 }
 
-#img-turno {
-    width: 30%;
-    transform: rotate(-10deg);
-    margin-top: 70px;
+#construccion-titulo {
+    font-size: 3rem;
 }
 
-.nombres, .fecha-hora, .tel-mail {
-    display: flex;
-    justify-content: space-between;
+#sitio-construccion p {
+    font-size: x-large;
 }
 
-.servicio-fecha-hora {
-    display: flex;
-}
-
-.fecha-hora {
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 105px;
-    margin-top: -15px;
-}
-
-.form-control input[type="tel"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-control input[type="checkbox"] {
-    transform: scale(1.5);
-}
-
-.form-control-servicios {
-    line-height: 2rem;
-}
-
-.tipo-servicio {
-    margin-right: 7px;
-}
-
-.form-control input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-control-hora {
-    width: 100%;
-}
-
-/* DIVS ERROR */
-.error {
-    color: red;
-    padding: 5px;
-    text-wrap: wrap;
-}
-
-#form-exitoso {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 20px;
-    display: none;
-}
-
-<<<<<<< HEAD
-=======
-
-.encabezado{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-
-}
-
-.nota{
-    color: red;
-    font-size: 2vw;
-    width: fit-content;
-    transform: rotate(22deg);
-    padding: 0.5em;
-    margin-right: 1em;
-    background-color: #fafafa;
-    text-align: center;
-    border: 1px solid red;
-    border-radius: 10px;
-    z-index: 9999;
-}
-
->>>>>>> 7cae9b2a25c6ed9d0d3e6382560d970003fe6326
+/* MEDIA QUERIES */ 
