@@ -1,6 +1,6 @@
 /* VARIABLES */
-:root{ 
-    --bg-color:#aecedd; 
+:root{
+    --bg-color:#aecedd;
     --primary-color:#375a4f ;
     --secondary-color:#616c60 ;
     --third-color:#;
@@ -9,11 +9,11 @@
 }
 
 /* ESTILOS GLOBALES */
-*{ 
+*{
     margin: 0;
-    padding: 0; 
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif; 
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 body{
@@ -31,7 +31,7 @@ a {
     background-image: url(##);
     background-size: cover;
     background-position: center;
-    /*height: 600px;*/ 
+    /*height: 600px;*/
     box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
     padding: 90px 10px;
     margin: 20px 0px;
@@ -79,7 +79,7 @@ nav > ul > li {
 nav > ul > li > a {
     padding: 10px 20px;
     /* border: 1px solid var(--primary-color); */
-    border-radius: 10px; 
+    border-radius: 10px;
     background-color: var(--primary-color);
 }
 
@@ -92,7 +92,7 @@ nav > ul > li > a:hover {
     visibility: hidden;
 }
 
-/* SECTION BANNER */ 
+/* SECTION BANNER */
 
 #banner{
     background-image: url(../img/banner-1-ext.jpeg);
@@ -159,7 +159,7 @@ h2 {
     font-family: Caveat, sans-serif
 }
 
-.acordeon{  
+.acordeon-v{
     max-width: 120em;
     padding: 1em;
     display: flex;
@@ -167,7 +167,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-.acordeon .bloque{
+.acordeon-v .bloque-v{
     /* margin: 0 0 1em; */
     padding: 1em;
     display:flex;
@@ -175,7 +175,7 @@ h2 {
 
 }
 
-.acordeon .img-acordeon{
+.acordeon-v .img-acordeon-v{
     width: 14em;
     height: 18em;
     background-color: #fafafa;
@@ -186,13 +186,13 @@ h2 {
     border-style: solid;
 }
 
-.acordeon .contenido{
+.acordeon-v .contenido{
     background-color: #fafafa;
     width: 0px;
     padding: 0em;
     overflow: hidden;
     transition: all 0.7s ease;
-    display: flex; 
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
@@ -205,10 +205,10 @@ h2 {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
-.acordeon .bloque:hover .contenido{
+.acordeon-v .bloque-v:hover .contenido{
     width: 10em;
 }
-    
+
 /* SECTION SERVICIOS */
 
 #texto-servicios > h2 {
@@ -224,28 +224,84 @@ h2 {
 
 #contenido-servicios{
     display: flex;
-    flex-wrap: row nowrap;
-    align-content:space-evenly; /*permite alinear respecto al eje secundario cuando tenemos más de una linea de elementos, pero el flex-wrap debe estar en wrap para que se aplique*/
-    justify-content:center;
+    flex-wrap: row wrap;
+    /* align-content:space-between; permite alinear respecto al eje secundario cuando tenemos más de una linea de elementos, pero el flex-wrap debe estar en wrap para que se aplique */
+    justify-content:space-evenly;
     align-items:center;
-    gap: 5em;   
+    /* gap: 7em;    */
 }
 
 #opciones-servicio {
-    background-color: #fafafa;
     height: 25vw;
     width: 35vw;
-    padding-top: 4vw;
     /*padding-left: 30px; */
-    border-radius: 80%;
     text-align: center;
-    border-color: #375a4f;
+    align-content: space-around;
+    /* border-color: #375a4f;
     border-width: medium;
-    border-style: solid;    
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3); */
 }
 
-#opciones-servicio > ul{
+.acordeon-h{
+    /* width: 90%; */
+    padding: 0.4em 1em;
+    margin-bottom: 1em;
+}
+
+.acordeon-h .bloque-h{
+    background-color: var(--primary-color);
+    margin-bottom: 0.5em;
+    /* padding: 1em; */
+}
+
+.acordeon-h .titular{
+    font-size: 1.2vw;
+    text-align: left;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    background-color: #fafafa;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.acordeon-h .titular::before{
+    content: '+';
+    font-size: 1.1em;
+    position: absolute;
+    left: 30.5em;
+}
+
+.acordeon-h .bloque-h.activo .titular::before{
+    content: '-';
+}
+
+.acordeon-h .descripcion-acord{
+    font-size: 1em;
+    background-color: rgba(178, 189, 195, 0.2);
+    color: #fff;
+    text-align: center;
+    height: 0em;
+    padding: 0em 0.5em;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.acordeon-h .bloque-h.activo .descripcion-acord{
+    height: 5em;
+}
+
+p > span{
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    padding-top: 0.5em;
+    position: relative;
+    left: 40%;
+    cursor: pointer;
+}
+/* #opciones-servicio > ul{
     margin-bottom: 2.5em;
 }
 
@@ -254,12 +310,12 @@ h2 {
     text-align:center;
     font-size: 2vw;
     margin: .4em;
-}
+} */
 
 .button{
     background-color: var(--primary-color);
     font-size: 1.2vw;
-    padding: 10px; 
+    padding: 10px;
     border-radius: 10px; /*redondea las esquinas -- Permite cambiar visualmente el contenedor a un círculo */
     color: #fff;
     cursor: pointer; /*Cambia el cursor a una manito cuando estoy sobre el botón*/
@@ -698,14 +754,14 @@ h2 {
     text-align: center;
     line-height: 1.5rem;
     box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.5);
-    background-color: #fff; 
-    padding: 20px;           
+    background-color: #fff;
+    padding: 20px;
 }
 
 .testimonio {
     transition: transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
-  
+
 .testimonio:hover {
     transform: translateY(-25px);
 }
@@ -765,8 +821,8 @@ h2 {
     background-size:cover;
     background-position:top;
     display: flex;
-    justify-content: center; 
-    align-items: center;   
+    justify-content: center;
+    align-items: center;
 }
 
 .container-form h2 {
@@ -853,7 +909,7 @@ button[type="submit"]:hover {
  /*Contacto (estos estilos los estaba aplicando para el formulario)
     #form-consulta{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: space-evenly;
     align-content: space-around;
     align-items: center;
@@ -865,7 +921,7 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr 2fr;
     grid-row-gap: 20px; /* Espacio de 20px entre filas */
    /* justify-items: center; /* Centra los elementos horizontalmente dentro de las celdas */
-   /* align-items: center; /* Centra los elementos verticalmente dentro de las celdas 
+   /* align-items: center; /* Centra los elementos verticalmente dentro de las celdas
    */
 
 /* FOOTER */
@@ -943,4 +999,4 @@ i {
     font-size: x-large;
 }
 
-/* MEDIA QUERIES */ 
+/* MEDIA QUERIES */
