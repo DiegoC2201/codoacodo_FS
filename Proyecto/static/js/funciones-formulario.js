@@ -9,25 +9,44 @@ function validacion(){
     let apellido = document.getElementById("lastname").value;
     let email = document.getElementById("email").value;
     let indice = document.getElementById("tipoconsulta").selectedIndex;
-        if( nombre == '') {
-            //document.querySelector("error-firstname").innerHTML = "Debes completar este casillero!"
-            alert("Debe completar el casillero Nombre!")
+        if( nombre === '' || nombre.length < 3) {
+            Swal.fire({
+                title: "No indicaste tu nombre!",
+                text: "Asegurate de completar el casillero correctamente!",
+                icon: "error"
+              });
             return false;
-        } else if(apellido == '' ){
-
-            alert("Debe completar el casillero apellido!")
+        } else if(apellido === '' || apellido.length < 3){
+           Swal.fire({
+            title: "No indicaste tu apellido!",
+            text: "Asegurate de completar el casillero correctamente!",
+            icon: "error"
+          });
             return false;
         }else if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)/.test(email)) ){
-            alert("Ingrese un mail valido!")
+            Swal.fire({
+                title: "No indicaste tu mail!",
+                text: "Asegurate de completar el casillero correctamente!",
+                icon: "error"
+              });
             return false;
         }else if (indice == null || indice == 0){
-            alert("Debe elegir un tipo de consulta!")
+            Swal.fire({
+                title: "No indicaste tu consulta!",
+                text: "Debes elegir una de las opciones!",
+                icon: "error"
+              });
             return false;
         }
-        
+        Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Su conslta fue enviada!",
+            showConfirmButton: false,
+            timer: 15000
+          });
         return true
 }
-
 
 //  Expreciones generales que encontre
  
