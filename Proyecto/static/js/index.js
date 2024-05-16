@@ -55,26 +55,26 @@ let posicion = 0;
 //por lo tanto la operación debería ser posicion * -20%
 
 setInterval(function(){
-    grande.style.transform = `translateX(${ posicion }%)`;
+    if (grande) {
+        grande.style.transform = `translateX(${ posicion }%)`;
 
-    //quito la clase activo a todos los puntos
-    punto.forEach( (cadaPunto, i)=>{
-    punto[i].classList.remove('activo')
-    });
-    // y solo se la agrego al punto que corresponde según donde vaya i
-    punto[i].classList.add('activo');
-
-    //cuando transcurre el tiempo incremento i en 1 y calculo la nueva posición
-    i++;
-    posicion = i * -20;
-
-    //reinicio i cuando llego al final del carrusel
-    if(i>(punto.length-1)){
-        i=0
+        //quito la clase activo a todos los puntos
+        punto.forEach( (cadaPunto, i)=>{
+        punto[i].classList.remove('activo')
+        });
+        // y solo se la agrego al punto que corresponde según donde vaya i
+        punto[i].classList.add('activo');
+    
+        //cuando transcurre el tiempo incremento i en 1 y calculo la nueva posición
+        i++;
         posicion = i * -20;
+    
+        //reinicio i cuando llego al final del carrusel
+        if(i>(punto.length-1)){
+            i=0
+            posicion = i * -20;
+        }    
     }
-
-
 },2500);
 
 
@@ -84,17 +84,51 @@ setInterval(function(){
 //se usa el "#" cuando hacemos referencia a un id
 
 const parrafo = document.querySelector("#nota");
-
-
     
-function addNote(){
-    parrafo.innerHTML = "A la espera de aprender <br>carga dinámica de datos con JS";
-    console.log('hola');
+function addNote() {
+    // la funcion verifica que elemento parrafo se encuentre en el DOM
+    if (parrafo) {
+        parrafo.innerHTML = "A la espera de aprender <br>carga dinámica de datos con JS";
+        console.log('Nota agregada');
+    } else {
+        console.error('El elemento #nota no se encuentra en el DOM');
+    }
 }
 
 //const enlace =  document.querySelector(".pendiente");
 //enlace.addEventListener("click", addNote);
 
-
-
 addNote();
+
+
+// EFECTO QUE MUESTRA U OCULTA LA NAV OCULTA EN DISPOSITIVOS MOVILES
+// Muestra la barra de navegación cuando se hace clic en el logo y la cierra cuando se hace clic en cualquier elemento del menú.
+
+//se ejecuta cuando todo el HTML del documento ha sido completamente cargado 
+document.addEventListener('DOMContentLoaded', function() {
+    // verifica el ancho de la pantalla coicida con dispositivos moviles y que el usuario se encuentre en index.html (de lo contrario, en otros dispositivos o cuando el usuario se encuentra en otra pagina del sitio, al hacer clic sobre el logo se redirija al index,html)
+    if (window.matchMedia("(max-width: 575px)").matches && window.location.pathname.endsWith('/index.html')) {
+        // se seleccionan los elementos del DOM
+        const logo = document.querySelector('#logo a');
+        const nav = document.querySelector('nav');
+        const navItems = document.querySelectorAll('nav ul li a');
+
+        // se escucba el click sobre el logo
+        logo.addEventListener('click', function(event) {
+            // se previene el comportamiento por defecto del click en el logo que es un enlace
+            event.preventDefault();
+            // se agrega la clase active al nav para que puedan aplicarse los estilos establecidos en el css y el nav se muestre
+            nav.classList.toggle('active');
+        }); 
+
+        // se recorren todos los elementos del nav
+        navItems.forEach(function(item) {
+            // se escucha el click en cada elemento
+            item.addEventListener('click', function() {
+                // cuando ocurre el click en algun elemento, se quita la clase active a la nev, lo que permite que se oculte
+                nav.classList.remove('active');
+            });
+        });
+    }
+});
+
