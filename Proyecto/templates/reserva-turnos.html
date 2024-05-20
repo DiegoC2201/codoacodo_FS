@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <!--Iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Pelo y Barba</title>
 </head>
 
@@ -76,15 +76,17 @@
                 <div class="servicio-fecha-hora">
                     <!--Tipo de servicio-->
                     <div class="form-control form-control-servicios">
-                        <label for="servicio">Servicio</label>
-                        <input type="checkbox" name="servicio" id="banio" class="tipo-servicio">Baño<br>
-                        <input type="checkbox" name="servicio" id="corte" class="tipo-servicio">Corte<br>
-                        <input type="checkbox" name="servicio" id="oidos" class="tipo-servicio">Limpieza de oídos<br>
-                        <input type="checkbox" name="servicio" id="desparasitado"
-                            class="tipo-servicio">Desparasitado<br>
-                        <input type="checkbox" name="servicio" id="paticure" class="tipo-servicio">Paticure<br>
+                        <fieldset>
+                            <legend>Servicio</legend>
+                            <input type="checkbox" name="servicio" id="banio" class="tipo-servicio"> <label for="banio">Baño</label><br>
+                            <input type="checkbox" name="servicio" id="corte" class="tipo-servicio"> <label for="corte">Corte</label><br>
+                            <input type="checkbox" name="servicio" id="oidos" class="tipo-servicio"> <label for="oidos">Limpieza de oídos</label><br>
+                            <input type="checkbox" name="servicio" id="desparasitado" class="tipo-servicio"> <label for="desparasitado">Desparasitado</label><br>
+                            <input type="checkbox" name="servicio" id="paticure" class="tipo-servicio"> <label for="paticure">Paticure</label><br>
+                        </fieldset>
                         <div class="error" id="error-servicio"></div>
                     </div>
+                    
                     <div class="fecha-hora">
                         <!--Fecha-->
                         <div class="form-control">
@@ -160,6 +162,7 @@
             <p>Política de Privacidad | Términos y Condiciones</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../static/js/validaciones-form-turnos.js"></script>
 </body>
 
