@@ -101,20 +101,20 @@ function addNote() {
 addNote();
 
 
-// EFECTO QUE MUESTRA U OCULTA LA NAV OCULTA EN DISPOSITIVOS MOVILES
-// Muestra la barra de navegación cuando se hace clic en el logo y la cierra cuando se hace clic en cualquier elemento del menú.
+// EFECTO QUE MUESTRA U OCULTA LA NAV EN DISPOSITIVOS MOVILES
+// Muestra la barra de navegación cuando se hace clic en el menu hamburguesa y la cierra cuando se hace clic en cualquier elemento del menú.
 
 //se ejecuta cuando todo el HTML del documento ha sido completamente cargado 
 document.addEventListener('DOMContentLoaded', function() {
     // verifica el ancho de la pantalla coicida con dispositivos moviles y que el usuario se encuentre en index.html (de lo contrario, en otros dispositivos o cuando el usuario se encuentra en otra pagina del sitio, al hacer clic sobre el logo se redirija al index,html)
     if (window.matchMedia("(max-width: 575px)").matches && window.location.pathname.endsWith('/index.html')) {
         // se seleccionan los elementos del DOM
-        const logo = document.querySelector('#logo a');
+        const menuHamburguesa = document.querySelector('.menu-hamburguesa');
         const nav = document.querySelector('nav');
         const navItems = document.querySelectorAll('nav ul li a');
 
         // se escucba el click sobre el logo
-        logo.addEventListener('click', function(event) {
+        menuHamburguesa.addEventListener('click', function(event) {
             // se previene el comportamiento por defecto del click en el logo que es un enlace
             event.preventDefault();
             // se agrega la clase active al nav para que puedan aplicarse los estilos establecidos en el css y el nav se muestre

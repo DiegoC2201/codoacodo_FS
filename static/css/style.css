@@ -58,6 +58,10 @@ a {
     z-index: 9999;
 }
 
+.menu-hamburguesa {
+    display: none;
+}
+
 #logo {
     display: flex;
     align-items: center;
@@ -613,14 +617,6 @@ fieldset {
     bottom: 0;
 }
 
-/* #encabezado-prod-flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-    margin-bottom: 40px;
-} */
-
 #encabezado-prod-flex>h2 {
     text-align: center;
     font-size: 3.5vw;
@@ -763,8 +759,6 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    /* height: 200px;
-    justify-content:space-around; */
     align-items: center;
     row-gap: 20px;
 }
@@ -948,26 +942,7 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
-/*Contacto (estos estilos los estaba aplicando para el formulario)
-    #form-consulta{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: space-around;
-    align-items: center;
-    .consulta{
-    margin: 20px auto;
-    height: 90%;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 2fr;
-    grid-row-gap: 20px; /* Espacio de 20px entre filas */
-/* justify-items: center; /* Centra los elementos horizontalmente dentro de las celdas */
-/* align-items: center; /* Centra los elementos verticalmente dentro de las celdas
-   */
-
 /* FOOTER */
-
 footer {
     width: 100vw;
     height: 200px;
@@ -1201,20 +1176,26 @@ i {
 @media only screen and (max-width: 575px) {
 
     /* HEADER */
+    .menu-hamburguesa {
+        display: inline;
+    }
+    .menu-hamburguesa:hover {
+        cursor: pointer;
+    }
+    .logo-oculto {
+        display: none;
+    }
     .header {
         display: flex;
         flex-direction: column;
         align-items: start;
     }
-
     nav {
         display: none;
     }
-
     nav.active {
         display: flex;
     }
-
     nav>ul {
         display: flex;
         flex-direction: column;
@@ -1222,11 +1203,9 @@ i {
         padding: 0;
         margin: 0;
     }
-
     nav > ul > li {
         margin: 5px 0;
     }
-    
     nav > ul > li > a {
         display: block;
         width: 100%; 
@@ -1237,7 +1216,6 @@ i {
         text-align: center;
         box-sizing: border-box;
     }
-
     /* BANNER */
     #banner {
         background-size: contain;
