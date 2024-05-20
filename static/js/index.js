@@ -115,8 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // se escucba el click sobre el logo
         menuHamburguesa.addEventListener('click', function(event) {
-            // se previene el comportamiento por defecto del click en el logo que es un enlace
-            event.preventDefault();
             // se agrega la clase active al nav para que puedan aplicarse los estilos establecidos en el css y el nav se muestre
             nav.classList.toggle('active');
         }); 
