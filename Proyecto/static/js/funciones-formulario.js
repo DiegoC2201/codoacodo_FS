@@ -2,7 +2,7 @@
 // 
 //esta fucion lee los campos por ID y aplica logia a los valores
 // si todos los valores son los requeridos devuelve true y permite el envio del formulario
-// de lo contrario retorna false y el uuario tiene que verificar el campo indicado
+// de lo contrario retorna false y el usuario tiene que verificar el campo indicado
 
 function validacion(){
     let nombre = document.getElementById("firstname").value; 
@@ -43,7 +43,7 @@ function validacion(){
             icon: "success",
             title: "Su conslta fue enviada!",
             showConfirmButton: false,
-            timer: 15000
+            timer: 10000
           });
         return true
 }
