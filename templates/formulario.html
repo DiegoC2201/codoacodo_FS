@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
         <!--Hoja de estilos-->
         <link rel="stylesheet" href="../static/css/style.css">
         <!--Iconos-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <title>Pelo y Barba - Contacto</title>
     </head>
 <body>
@@ -64,30 +64,11 @@
                 <div class="form-control">
                     <label>Tipo de Consulta</label><br>
                     <select name="tipoconsulta" id="tipoconsulta" class="form-select" required>
-                        <option value="0">...</option>
+                        <option value="">Seleccione una opción</option>
                         <option value="S">Servicio</option>
                         <option value="P">Productos</option>
                         <option value="O">Otra consulta</option>
                     </select>                   
-                </div>
-                <!--Tipo de servicio-->
-                <!--Esta sección debería aparecer únicamente si el cliente selecciona "Servicio" en el desplegable anterior-->
-                <div class="form-control">
-                    <div class="servicio">
-                        <label>Tipo de Servicio</label><br>
-                        <input type="checkbox" name="opcion" value="B">Baño<br>
-                        <input type="checkbox" name="opcion" value="C">Corte<br>
-                        <input type="checkbox" name="opcion" value="D">Desparacitado<br>
-                        <input type="checkbox" name="opcion" value="P">Paticure<br>
-                    </div>
-                </div>
-                <!--Verificación de si ya es cliente-->
-                <div class="form-control">
-                    <div class="cliente">
-                        <label>Ya es cliente?</label> <!--Ver dónde corresponde poner el requierd acá-->
-                        <input type="radio" name="opcion" value="1">Sí
-                        <input type="radio" name="opcion" value="0">No
-                    </div>
                 </div>
                 <!--Espacio para la consulta-->
                 <div class="form-control">
@@ -98,7 +79,7 @@
                 <!--Botón de envío-->
                 <button type="submit" >Enviar consulta</button>
                 <div class="form-help">
-                    <a href="#">¿Necesitás ayuda?</a>
+                    <a href="../templates/sitio-construccion.html">¿Necesitás ayuda?</a>
                 </div>
             </form>
         </section>

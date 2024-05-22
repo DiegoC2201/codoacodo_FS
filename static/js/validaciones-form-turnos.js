@@ -61,5 +61,12 @@ function validar() {
         return false;
     }
 
+    Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Turno reservado exitosamente!",
+        showConfirmButton: true
+      });
+
     return true;
 }

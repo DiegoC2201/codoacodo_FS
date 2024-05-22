@@ -1,22 +1,24 @@
 /* VARIABLES */
-:root{
-    --bg-color:#aecedd;
-    --primary-color:#375a4f ;
-    --secondary-color:#616c60 ;
-    --third-color:#;
-    --third-bis-color:rgba(174, 206, 221, 0.8); /*es el color del bg pero con opacidad*/;
-    --bg-input-color:#;
+:root {
+    --bg-color: #aecedd;
+    --primary-color: #375a4f;
+    --secondary-color: #616c60;
+    --third-color: #;
+    --third-bis-color: rgba(174, 206, 221, 0.8);
+    /*es el color del bg pero con opacidad*/
+    ;
+    --bg-input-color: #;
 }
 
 /* ESTILOS GLOBALES */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-body{
+body {
     background-color: var(--bg-color);
     /*background-image: url(../img/background_alternativa_2.jpg);*/
 }
@@ -27,12 +29,16 @@ a {
 }
 
 /* ESTILOS COMUNES A TODAS LAS SECCIONES */
-#nosotros, #servicios, #productos, #testimonios, #contacto {
+#nosotros,
+#servicios,
+#productos,
+#testimonios,
+#contacto {
     background-image: url(##);
     background-size: cover;
     background-position: center;
     /*height: 600px;*/
-    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
+    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2);
     padding: 90px 10px;
     margin: 20px 0px;
 }
@@ -41,15 +47,19 @@ a {
 
 .header {
     background-color: var(--bg-color);
-    position:fixed;
+    position: fixed;
     top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px;
     font-size: 1.5vw;
     width: 100%;
     z-index: 9999;
+}
+
+.menu-hamburguesa {
+    display: none;
 }
 
 #logo {
@@ -58,7 +68,7 @@ a {
     color: var(--primary-color);
 }
 
-#logo > a {
+#logo>a {
     font-size: 1.5rem;
     color: black;
 }
@@ -67,25 +77,24 @@ a {
     width: 10%;
 }
 
-nav > ul {
+nav>ul {
     display: flex;
     list-style-type: none;
 }
 
-nav > ul > li {
+nav>ul>li {
     margin: 5px;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
     padding: 10px 20px;
     /* border: 1px solid var(--primary-color); */
     border-radius: 10px;
     background-color: var(--primary-color);
 }
 
-nav > ul > li > a:hover {
-    background-color: var(--secondary-color) ;
-    color: #897e7e;
+nav>ul>li>a:hover {
+    background-color: var(--secondary-color);
 }
 
 .nav-oculta {
@@ -94,7 +103,7 @@ nav > ul > li > a:hover {
 
 /* SECTION BANNER */
 
-#banner{
+#banner {
     background-image: url(../img/banner-1-ext.jpeg);
     background-size: cover;
     background-position: center;
@@ -103,18 +112,18 @@ nav > ul > li > a:hover {
     /*box-shadow:inset 0 0 0 2000px rgba(84,84,84,0.5);*/
 }
 
-#banner > #container {
+#banner>#container {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     height: 600px;
     padding-left: 20px;
 }
 
-#info{
+#info {
     color: #fff;
     font-size: 2vw;
-    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
+    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2);
     margin-top: 4vw;
     padding: 10px;
     width: 40vw;
@@ -133,7 +142,7 @@ h2 {
     margin: 10px 0px;
 }
 
-#banner > #container > h2 {
+#banner>#container>h2 {
     color: var(--primary-color);
     font-size: 3.5vw;
     font-family: Caveat, sans-serif;
@@ -141,7 +150,7 @@ h2 {
 
 /* SECCION NOSOTROS*/
 
-.nosotros-text > h2 {
+.nosotros-text>h2 {
     text-align: center;
     font-size: 3.5vw;
 }
@@ -159,7 +168,7 @@ h2 {
     font-family: Caveat, sans-serif
 }
 
-.acordeon-v{
+.acordeon-v {
     max-width: 120em;
     padding: 1em;
     display: flex;
@@ -167,15 +176,15 @@ h2 {
     flex-wrap: wrap;
 }
 
-.acordeon-v .bloque-v{
+.acordeon-v .bloque-v {
     /* margin: 0 0 1em; */
     padding: 1em;
-    display:flex;
+    display: flex;
     flex-wrap: nowrap;
 
 }
 
-.acordeon-v .img-acordeon-v{
+.acordeon-v .img-acordeon-v {
     width: 14em;
     height: 18em;
     background-color: #fafafa;
@@ -186,7 +195,7 @@ h2 {
     border-style: solid;
 }
 
-.acordeon-v .contenido{
+.acordeon-v .contenido {
     background-color: #fafafa;
     width: 0px;
     padding: 0em;
@@ -205,13 +214,13 @@ h2 {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
-.acordeon-v .bloque-v:hover .contenido{
+.acordeon-v .bloque-v:hover .contenido {
     width: 10em;
 }
 
 /* SECTION SERVICIOS */
 
-#texto-servicios > h2 {
+#texto-servicios>h2 {
     text-align: center;
     font-size: 3.5vw;
 }
@@ -222,12 +231,12 @@ h2 {
     font-family: Caveat, sans-serif
 }
 
-#contenido-servicios{
+#contenido-servicios {
     display: flex;
     flex-wrap: row wrap;
     /* align-content:space-between; permite alinear respecto al eje secundario cuando tenemos más de una linea de elementos, pero el flex-wrap debe estar en wrap para que se aplique */
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     /* gap: 7em;    */
 }
 
@@ -243,19 +252,19 @@ h2 {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3); */
 }
 
-.acordeon-h{
+.acordeon-h {
     /* width: 90%; */
     padding: 0.4em 1em;
     margin-bottom: 1em;
 }
 
-.acordeon-h .bloque-h{
+.acordeon-h .bloque-h {
     background-color: var(--primary-color);
     margin-bottom: 0.5em;
     /* padding: 1em; */
 }
 
-.acordeon-h .titular{
+.acordeon-h .titular {
     font-size: 1.2vw;
     text-align: left;
     margin-bottom: 0.5em;
@@ -265,18 +274,18 @@ h2 {
     cursor: pointer;
 }
 
-.acordeon-h .titular::before{
+.acordeon-h .titular::before {
     content: '+';
     font-size: 1.1em;
     position: absolute;
     left: 30.5em;
 }
 
-.acordeon-h .bloque-h.activo .titular::before{
+.acordeon-h .bloque-h.activo .titular::before {
     content: '-';
 }
 
-.acordeon-h .descripcion-acord{
+.acordeon-h .descripcion-acord {
     font-size: 1em;
     background-color: rgba(178, 189, 195, 0.2);
     color: #fff;
@@ -287,11 +296,11 @@ h2 {
     transition: all .5s ease;
 }
 
-.acordeon-h .bloque-h.activo .descripcion-acord{
-    height: 5em;
+.acordeon-h .bloque-h.activo .descripcion-acord {
+    height: 7em;
 }
 
-p > span{
+p>span {
     font-size: 1em;
     color: #000;
     font-weight: bold;
@@ -301,6 +310,7 @@ p > span{
     left: 40%;
     cursor: pointer;
 }
+
 /* #opciones-servicio > ul{
     margin-bottom: 2.5em;
 }
@@ -312,42 +322,45 @@ p > span{
     margin: .4em;
 } */
 
-.button{
+.button {
     background-color: var(--primary-color);
     font-size: 1.2vw;
     padding: 10px;
-    border-radius: 10px; /*redondea las esquinas -- Permite cambiar visualmente el contenedor a un círculo */
+    border-radius: 10px;
+    /*redondea las esquinas -- Permite cambiar visualmente el contenedor a un círculo */
     color: #fff;
-    cursor: pointer; /*Cambia el cursor a una manito cuando estoy sobre el botón*/
+    cursor: pointer;
+    /*Cambia el cursor a una manito cuando estoy sobre el botón*/
 }
 
-.carrusel{
+.carrusel {
     width: 40%;
     max-width: 120em;
     margin-top: 3em;
     overflow-x: hidden;
 }
 
-.carrusel > .grande{
+.carrusel>.grande {
     width: 500%;
     gap: 10px;
     display: flex;
-    flex-flow: row nowrap; /*Atajo para resumir los valores de las propiedades flex-direction y flex-wrap*/
-    justify-content:space-around;
+    flex-flow: row nowrap;
+    /*Atajo para resumir los valores de las propiedades flex-direction y flex-wrap*/
+    justify-content: space-around;
     align-items: center;
 
     /*transition: all .5s ease;
     transform: translateX(-20%);*/
 }
 
-.grande > img{
+.grande>img {
     width: calc(100%/5 - 2em);
     min-height: 10vh;
     object-fit: auto;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 
-.carrusel > .puntos{
+.carrusel>.puntos {
     width: 98%;
     background-color: transparent;
     border-radius: 10em;
@@ -359,7 +372,7 @@ p > span{
     list-style: none;
 }
 
-.puntos > .punto{
+.puntos>.punto {
     width: 1em;
     height: 1em;
     margin: .5em;
@@ -368,16 +381,16 @@ p > span{
 
 }
 
-.carrusel .punto.activo{
+.carrusel .punto.activo {
     background-color: var(--primary-color);
 }
 
 /* FORMULARIO RESERVA DE TURNOS */
 #container-form-turnos {
     background-color: white;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #img-turno {
@@ -386,7 +399,9 @@ p > span{
     margin-top: 70px;
 }
 
-.nombres, .fecha-hora, .tel-mail {
+.nombres,
+.fecha-hora,
+.tel-mail {
     display: flex;
     justify-content: space-between;
 }
@@ -400,6 +415,10 @@ p > span{
     justify-content: space-around;
     margin-left: 105px;
     margin-top: -15px;
+}
+
+fieldset {
+    border: none;
 }
 
 .form-control input[type="tel"] {
@@ -438,12 +457,13 @@ p > span{
     padding: 5px;
     text-wrap: wrap;
 }
+
 /* FORMULARIO RESERVA DE TURNOS */
 #container-form-turnos {
     background-color: white;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #img-turno {
@@ -452,7 +472,9 @@ p > span{
     margin-top: 70px;
 }
 
-.nombres, .fecha-hora, .tel-mail {
+.nombres,
+.fecha-hora,
+.tel-mail {
     display: flex;
     justify-content: space-between;
 }
@@ -477,6 +499,16 @@ p > span{
 
 .form-control input[type="checkbox"] {
     transform: scale(1.5);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .form-control-servicios {
@@ -512,6 +544,7 @@ p > span{
     margin: 20px;
     display: none;
 }
+
 #form-exitoso {
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -522,11 +555,12 @@ p > span{
 
 /* SECTION PRODUCTOS*/
 
-.products-flex{
+.products-flex {
     display: flex;
     flex-wrap: wrap;
-    align-content:space-around; /*permite alinear respecto al eje secundario cuando tenemos más de una linea de elementos, pero el flex-wrap debe estar en wrap para que se aplique*/
-    justify-content:center;
+    align-content: space-around;
+    /*permite alinear respecto al eje secundario cuando tenemos más de una linea de elementos, pero el flex-wrap debe estar en wrap para que se aplique*/
+    justify-content: center;
     align-items: center;
     gap: 8vw;
 }
@@ -535,7 +569,7 @@ p > span{
     color: black;
 }
 
-.producto-x{
+.producto-x {
     border-radius: 20px;
     background-color: var(--secondary-color);
     overflow: hidden;
@@ -547,20 +581,21 @@ p > span{
     cursor: pointer;
     transition: all 450ms;
     -webkit-transform-origin: center left;
-            transform-origin: center left;
+    transform-origin: center left;
 }
 
-.producto-img{
+.producto-img {
     border-radius: 10px;
     align-self: center;
     justify-self: center;
     width: 200px;
     height: 300px;
     object-fit: cover;
-    -o-object-fit: cover; /* el prefijo -o- es para que se vea bien en el ópera (que es un explorador).. esto corrije la propiedad definida y la adapta para ópera.. con el resto de los exploradores el object-fit corre sin problemas. Se puede usar la pagina "caniuse" para chequear compatibilidades con los navegadores*/
+    -o-object-fit: cover;
+    /* el prefijo -o- es para que se vea bien en el ópera (que es un explorador).. esto corrije la propiedad definida y la adapta para ópera.. con el resto de los exploradores el object-fit corre sin problemas. Se puede usar la pagina "caniuse" para chequear compatibilidades con los navegadores*/
 }
 
-.detalle-producto{
+.detalle-producto {
     bottom: -100%;
     padding: 30px;
     max-height: 100%;
@@ -568,13 +603,13 @@ p > span{
     /* altura de la linea para el texto afecta el espacio vertical(alto de texto)*/
     line-height: 15px;
     position: absolute;
-    background-color:var(--third-bis-color);
+    background-color: var(--third-bis-color);
     box-sizing: border-box;
     transition: bottom 0.4s ease-in-out;
     width: 100%;
 }
 
-.producto-x:hover{
+.producto-x:hover {
     opacity: 0.8;
 }
 
@@ -582,49 +617,55 @@ p > span{
     bottom: 0;
 }
 
-/* #encabezado-prod-flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-    margin-bottom: 40px;
-} */
-
-#encabezado-prod-flex > h2 {
+#encabezado-prod-flex>h2 {
     text-align: center;
     font-size: 3.5vw;
 }
 
-#encabezado-prod-flex > p{
+#encabezado-prod-flex>p {
     text-align: center;
     font-size: 3vw;
     margin-bottom: 1em;
     font-family: Caveat, sans-serif
 }
 
-#encabezado-prod-flex > p:hover {
+#encabezado-prod-flex>p:hover {
     animation: tilt-n-move-shaking 0.5s infinite;
 }
 
 @keyframes tilt-n-move-shaking {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(3px, 3px) rotate(3deg); }
-    50% { transform: translate(0, 0) rotate(0deg); }
-    75% { transform: translate(-3px, 3px) rotate(-3deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(3px, 3px) rotate(3deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-3px, 3px) rotate(-3deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
 
-#encabezado-prod-flex > p::before{
+#encabezado-prod-flex>p::before {
     content: '🌟';
     font-style: normal;
 }
 
-#encabezado-prod-flex > p::after{
+#encabezado-prod-flex>p::after {
     content: '🌟';
     font-style: normal;
 }
 
-#boton-productos{
+#boton-productos {
     width: 100%;
     margin-top: 3em;
     display: flex;
@@ -632,23 +673,23 @@ p > span{
     justify-content: center;
 }
 
-#producto2{
+#producto2 {
     order: -1;
 }
 
-#producto3{
+#producto3 {
     order: 1;
 }
 
 /* PAGINA DETALLE PRODUCTO*/
 
-.encabezado{
+.encabezado {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.nota{
+.nota {
     color: red;
     font-size: 2vw;
     width: fit-content;
@@ -662,35 +703,35 @@ p > span{
     z-index: 9999;
 }
 
-#detalleproducto{
+#detalleproducto {
     margin: 100px 15px 0px 15px;
 }
 
-.detalle-flex{
+.detalle-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     background-color: rgba(87, 97, 110, 0.2);
     margin-top: 30px;
-    padding: 20px   ;
+    padding: 20px;
 }
 
-.descripcion{
+.descripcion {
     width: 20vw;
     align-items: center;
 }
 
-.descripcion > p{
+.descripcion>p {
     width: 20vw;
     margin-bottom: 10px;
 }
 
-#precio-antes{
+#precio-antes {
     font-weight: bold;
     font-size: 1.1em;
     background-color: red;
-    width:fit-content;
+    width: fit-content;
     padding: 10px;
     margin: 8px 0px;
     border-radius: 20px;
@@ -698,7 +739,7 @@ p > span{
     border-width: 2px;
 }
 
-#precio-ahora{
+#precio-ahora {
     font-weight: bold;
     font-size: 1.1em;
     background-color: green;
@@ -710,32 +751,30 @@ p > span{
     border-width: 2px
 }
 
-.beneficios{
+.beneficios {
     width: 25vw;
 }
 
-.botones-compra{
+.botones-compra {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    /* height: 200px;
-    justify-content:space-around; */
     align-items: center;
     row-gap: 20px;
 }
 
-.botones-compra > .button{
+.botones-compra>.button {
     width: 10vw;
 }
 
 /* SECTION TESTIMONIOS*/
 
-.caja-testimonios > h2 {
+.caja-testimonios>h2 {
     text-align: center;
     font-size: 3.5vw;
 }
 
-.caja-testimonios > p {
+.caja-testimonios>p {
     text-align: center;
     font-size: 3vw;
     font-family: Caveat, sans-serif
@@ -756,9 +795,6 @@ p > span{
     box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.5);
     background-color: #fff;
     padding: 20px;
-}
-
-.testimonio {
     transition: transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
@@ -786,26 +822,27 @@ p > span{
     font-weight: bold;
 }
 
-#consulta-container{
+#consulta-container {
     display: flex;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
     max-width: 80%;
     margin: 20px;
     border: 3px solid var(--secondary-color);
     box-shadow: inset 0 0 0 2000px whitesmoke;
 }
 
-.box-info{
+.box-info {
     text-align: center;
     border: 3px solid var(--secondary-color);
-    box-shadow: inset  0 0 0 1000px hwb(201 55% 15%);
+    box-shadow: inset 0 0 0 1000px hwb(201 55% 15%);
     padding: 30px;
     max-width: 45%;
     line-height: 1.5rem;
 }
 
-.box-info button, h3 {
+.box-info button,
+h3 {
     margin: 10px;
 }
 
@@ -815,11 +852,10 @@ p > span{
 }
 
 /* FORMULARIO CONTACTO */
-
 #container-form {
     background-image: url(../img/background_formulario.png);
-    background-size:cover;
-    background-position:top;
+    background-size: cover;
+    background-position: top;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -836,7 +872,7 @@ p > span{
     margin: 100px 0 20px;
     padding: 20px;
     border: 3px solid var(--secondary-color);
-    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2) ;
+    box-shadow: inset 0 0 0 2000px rgba(87, 97, 110, 0.2);
 }
 
 .form-control {
@@ -869,17 +905,17 @@ p > span{
 }
 
 /* Estilos para cuando se selecciona "Servicio" */
-#tipoconsulta[value="S"] ~ .form-control .servicio {
+#tipoconsulta[value="S"]~.form-control .servicio {
     display: block;
 }
 
 /* Estilos para cuando se selecciona "Sí" en la opción de cliente */
-.cliente input[type="radio"][value="1"]:checked ~ .consulta {
+.cliente input[type="radio"][value="1"]:checked~.consulta {
     display: none;
 }
 
 /* Estilos para el botón de envío */
-    button[type="submit"] {
+button[type="submit"] {
     background-color: #dc1c1c;
     color: white;
     padding: 10px 20px;
@@ -906,26 +942,7 @@ button[type="submit"]:hover {
     text-decoration: underline;
 }
 
- /*Contacto (estos estilos los estaba aplicando para el formulario)
-    #form-consulta{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: space-around;
-    align-items: center;
-    .consulta{
-    margin: 20px auto;
-    height: 90%;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 2fr;
-    grid-row-gap: 20px; /* Espacio de 20px entre filas */
-   /* justify-items: center; /* Centra los elementos horizontalmente dentro de las celdas */
-   /* align-items: center; /* Centra los elementos verticalmente dentro de las celdas
-   */
-
 /* FOOTER */
-
 footer {
     width: 100vw;
     height: 200px;
@@ -939,7 +956,7 @@ footer {
     justify-content: space-evenly;
 }
 
-.container-enlaces-footer > a {
+.container-enlaces-footer>a {
     color: black;
 }
 
@@ -1000,3 +1017,435 @@ i {
 }
 
 /* MEDIA QUERIES */
+/* Tablets */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    /* HEADER */
+    #img-logo {
+        width: 15%;
+    }
+
+    /* BANNER */
+    #banner {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 300px;
+        display: flex;
+    }
+
+    #banner>#container {
+        height: 230px;
+        padding-top: 70px;
+    }
+
+    /* SECCION NOSOTROS*/
+    .nosotros-text>h2 {
+        font-size: 5vw;
+    }
+
+    .nosotros-desarrollo {
+        font-size: 2vw;
+    }
+
+    .acordeon-v {
+        gap: 3em;
+    }
+
+    .acordeon-v .img-acordeon-v {
+        width: 11em;
+        height: 14em;
+    }
+
+    .acordeon-v .contenido {
+        font-size: 1.5vw;
+    }
+
+    /* SECTION SERVICIOS */
+    #texto-servicios h2 {
+        font-size: 5vw;
+    }
+
+    .acordeon-h .bloque-h .titular {
+        font-size: 1.5vw;
+    }
+
+    .acordeon-h .titular::before {
+        content: '+';
+        font-size: 1.5em;
+        position: absolute;
+        left: 17em;
+    }
+
+    .acordeon-h .bloque-h.activo .descripcion-acord {
+        font-size: 0.8em;
+        height: 9em;
+    }
+
+    .button {
+        font-size: 1.5vw;
+    }
+
+    /* FORMULARIO RESERVA DE TURNOS */
+    #container-form-turnos {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #img-turno {
+        width: 40%;
+        margin-top: -100px;
+        margin-left: 250px;
+        margin-bottom: 80px;
+    }
+    /* SECTION PRODUCTOS */
+    #encabezado-prod-flex>h2 {
+        font-size: 5vw;
+    }
+    .products-flex {
+        gap: 5em;
+    }
+    .products-flex > a > .producto-x {
+        width: 100%;
+    }
+    /* PAGINA DETALLE PRODUCTO*/
+    #detalleproducto > div > .detalle-flex {
+        align-items: start;
+        justify-content: space-between;
+    }
+    .producto-x,
+    .descripcion,
+    .beneficios,
+    .botones-compra {
+        width: 30%;
+    }
+    .botones-compra {
+        margin: 30px auto;
+    }
+    /* SECTION TESTIMONIOS */
+    .caja-testimonios>h2 {
+        font-size: 5vw;
+    }
+
+    .contenedor-testimonios {
+        flex-wrap: wrap;
+    }
+
+    .testimonio {
+        width: 35%;
+        margin: 35px;
+    }
+
+    /* SECTION CONTACTO */
+    .contacto-title {
+        font-size: 5vw;
+    }
+
+    #consulta-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-info {
+        max-width: 80%;
+        margin: 20px;
+    }
+
+    .box-mapa {
+        max-width: 100%;
+    }
+
+    /* FOOTER */
+    .legales {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 2rem;
+    }
+
+    /* SITIO EN CONSTRUCCION */
+    #sitio-construccion img {
+        width: 80%;
+    }
+}
+
+/* Teléfonos */
+@media only screen and (max-width: 575px) {
+
+    /* HEADER */
+    .menu-hamburguesa {
+        display: inline;
+    }
+    .menu-hamburguesa:hover {
+        cursor: pointer;
+    }
+    .logo-oculto {
+        display: none;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    nav {
+        display: none;
+    }
+    nav.active {
+        display: flex;
+    }
+    nav>ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    nav > ul > li {
+        margin: 5px 0;
+    }
+    nav > ul > li > a {
+        display: block;
+        width: 100%; 
+        padding: 10px;
+        border-radius: 0;
+        font-size: 1rem;
+        border: 2px solid black;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    /* BANNER */
+    #banner {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 250px;
+        display: flex;
+    }
+
+    #banner>#container {
+        height: 200px;
+        padding-top: 70px;
+    }
+
+    /* SECCION NOSOTROS*/
+    .nosotros-text>h2 {
+        font-size: 10vw;
+    }
+
+    .nosotros-text>.subtitulo {
+        font-size: 8vw;
+    }
+
+    .nosotros-desarrollo {
+        font-size: 4vw;
+    }
+
+    .acordeon-v {
+        gap: 3em;
+    }
+
+    .acordeon-v .img-acordeon-v {
+        width: 14em;
+        height: 17em;
+    }
+
+    .acordeon-v .contenido {
+        font-size: 3vw;
+    }
+
+    /* SECTION SERVICIOS */
+    #servicios {
+        height: 900px;
+    }
+
+    #contenido-servicios {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #texto-servicios h2 {
+        font-size: 10vw;
+    }
+
+    #texto-servicios p {
+        font-size: 8vw;
+    }
+
+    #opciones-servicio,
+    .carrusel {
+        width: 75%;
+    }
+
+    .acordeon-h .bloque-h .titular {
+        font-size: 4vw;
+    }
+
+    .acordeon-h .titular::before {
+        content: '+';
+        font-size: 1.5em;
+        position: absolute;
+        left: 12em;
+    }
+
+    .acordeon-h .bloque-h.activo .descripcion-acord {
+        font-size: 0.8em;
+        height: 11em;
+    }
+
+    .button {
+        font-size: 4vw;
+    }
+
+    /* SECTION PRODUCTOS */
+    #productos>div>#encabezado-prod-flex>h2 {
+        font-size: 10vw;
+    }
+    #productos>div>#encabezado-prod-flex>p {
+        font-size: 8vw;
+    }
+    .products-flex {
+        gap: 5em;
+    }
+    .products-flex > a > .producto-x {
+        width: 100%;
+    }
+    /* PAGINA DETALLE PRODUCTO*/
+    #detalleproducto > div > .encabezado > h2 {
+        font-size: 8vw;
+    }
+    #detalleproducto > div > .detalle-flex {
+        align-items: start;
+        justify-content: space-between;
+    }
+    .descripcion,
+    .beneficios {
+        width: 50%;
+    }
+    .producto-x {
+        width: auto;
+        margin: 20px auto;
+    }
+    .botones-compra {
+        margin: 20px auto;
+    }
+    .botones-compra>.button {
+        width: 200px;
+    }
+    .nota {
+        font-size: 5vw;
+        height: fit-content;
+    }
+    /* FORMULARIO RESERVA DE TURNOS */
+    #container-form-turnos {
+        padding: 10px;
+    }
+    #form-wrapper>h2 {
+        font-size: 8vw;
+    }
+    #container-form-turnos {
+        margin: 20px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .nombres, .tel-mail, .servicio-fecha-hora {
+        display: flex;
+        flex-direction: column;
+    }
+    .fecha-hora {
+        justify-content: start;
+        align-items: start;
+        padding: 0;
+        margin: 0;
+    }
+    #img-turno {
+        width: 60%;
+    }
+
+    /* SECTION PRODUCTOS */
+    #encabezado-prod-flex>h2 {
+        font-size: 5vw;
+    }
+
+    /* SECTION TESTIMONIOS */
+    .caja-testimonios>h2 {
+        font-size: 10vw;
+    }
+
+    .caja-testimonios>p {
+        font-size: 8vw;
+    }
+
+    .contenedor-testimonios {
+        flex-wrap: wrap;
+    }
+
+    .testimonio {
+        width: 80%;
+        margin: 35px;
+    }
+
+    /* SECTION CONTACTO */
+    .contacto-title {
+        font-size: 5vw;
+    }
+
+    #consulta-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-info {
+        max-width: 90%;
+        margin: 20px;
+    }
+
+    .box-mapa {
+        max-width: 100%;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    /* FORMULARIO CONTACTO */
+    #form-wrapper {
+        margin: 60px 10px 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        height: 400px;
+    }
+
+    .container-enlaces-footer {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    i {
+        font-size: 5vw;
+    }
+    .legales {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 2rem;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* SITIO EN CONSTRUCCION */
+    #sitio-construccion img {
+        width: 80%;
+    }
+
+    #sitio-construccion p {
+        text-align: center;
+    }
+}
