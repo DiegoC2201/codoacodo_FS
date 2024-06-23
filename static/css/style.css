@@ -1055,7 +1055,7 @@ i {
     padding: 0 50px;
 }
 
-.button-eliminar{
+.button-eliminar, .button-editar{
     background-color: var(--primary-color);
     border-radius: 10px;
     /*redondea las esquinas -- Permite cambiar visualmente el contenedor a un círculo */

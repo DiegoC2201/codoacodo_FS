@@ -30,6 +30,9 @@ function showProductos(){
                         <td>${product.peso}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id})'><i class="fa fa-pencil" ></button></i>
+                        </td>
+                        <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id})'><i class="fa fa-trash" ></button></i>
                         </td>
                     </tr>
@@ -69,14 +72,28 @@ function saveProducto(){
         //Busca en localstorage el item productos, si no existe asigna el array vacio.
         let productos = JSON.parse(localStorage.getItem('productos')) || [];
 
-        let newProducto = new Producto(
-            productos.length+1,
-            inputProducto.value,
-            inputMarca.value,
-            inputPeso.value,
-            inputCantidad.value,
-        );
-        productos.push(newProducto);
+        if(inputId.value!==""){
+            //Busco dentro del arraya de productos el objeto a editar
+            const productFind = productos.find(producto => producto.id == inputId.value);
+            //Si existe actualizo el objeto
+            if (productFind) {
+              productFind.producto = inputProducto.value;
+              productFind.marca = inputMarca.value;
+              productFind.cantidad = inputCantidad.value;
+              productFind.peso = inputPeso.value;
+            }
+        }else{
+            let newProducto = new Producto(
+                productos.length+1,
+                inputProducto.value,
+                inputMarca.value,
+                inputPeso.value,
+                inputCantidad.value,
+            );
+            productos.push(newProducto);
+        }
+
+       
 
         //Se actualiza el array de peliculas en el localstorage
         localStorage.setItem('productos',JSON.stringify(productos));
@@ -94,14 +111,38 @@ function saveProducto(){
 }
 
 
+/*
+Function que permite cargar el formulario para editar un producto de acuedo al id del producto
+@param {number} productId id producto que se va a actualizar */
+
+function updateProducto(productId){
+    let productos = JSON.parse(localStorage.getItem('productos'));
+    //se utiliza el metodo find para poder asegurarnos que exista el producto con el id que queremos aditar.
+    let productToUpdate = productos.find(producto => producto.id===productId);
+    if(productToUpdate){
+        //Se buscan los elementos HTML del input
+        const inputId = document.querySelector('#id-producto');
+        const inputProducto = document.querySelector('#producto');
+        const inputMarca = document.querySelector('#marca');
+        const inputPeso = document.querySelector('#peso');
+        const inputCantidad = document.querySelector('#cantidad');  
+        //Se cargan los inputs con los valores de la pelicula encontrada
+        inputId.value = productToUpdate.id;
+        inputProducto.value = productToUpdate.producto;
+        inputMarca.value = productToUpdate.marca;
+        inputPeso.value = productToUpdate.peso;
+        inputCantidad.value = productToUpdate.cantidad;
+    }
+}
+
 
 /* Function que permite eliminar una pelicula del array del localstorage de acuedo al indice del mismo
-@param {number} movieId id movie que se va a eliminar
+@param {number} productId id producto que se va a eliminar
 */
 
 function deleteProducto(productId){
     let productos = JSON.parse(localStorage.getItem('productos'));
-    //se utiliza el metodo find para poder asegurarnos que exista una pelicula con el id que queremos eliminar.
+    //se utiliza el metodo find para poder asegurarnos que exista un producto con el id que queremos eliminar.
     let productToDelete = productos.find(producto => producto.id===productId);
     if(productToDelete){
         //se utiliza el metodo filter para actualizar el array de movies, sin tener el elemento encontrado en cuestion.
@@ -117,6 +158,8 @@ function deleteProducto(productId){
         })
     }
 }
+
+
 
 // NOS ASEGURAMOS QUE SE CARGUE EL CONTENIDO DE LA PAGINA EN EL DOM
 document.addEventListener('DOMContentLoaded',function(){
