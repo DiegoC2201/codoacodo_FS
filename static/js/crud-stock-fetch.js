@@ -101,7 +101,7 @@ async function saveProducto(){
     
     // Si hay un inputId, realiza una petición PUT para actualizar el producto existente
     if(inputId!==""){
-        result = await fetchData(`${BASEURL}/api/productos/${idMovie}`, 'PUT', productData);
+        result = await fetchData(`${BASEURL}/api/productos/${inputId}`, 'PUT', productData);
     }else{
     // Si no hay inputId, realiza una petición POST para crear un nuevo producto
     result = await fetchData(`${BASEURL}/api/productos/`, 'POST', productData);

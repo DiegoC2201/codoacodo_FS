@@ -16,7 +16,7 @@ function showProductos(){
     //BUSCAR LO QUE HAY EN LOCAL STORAGE
     let productos = JSON.parse(localStorage.getItem('productos')) || [];
 
-    //buscar elemento HTML donde quiero insertar las peliculas
+    //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
 
     //limpio el contenido de la tabla
@@ -95,7 +95,7 @@ function saveProducto(){
 
        
 
-        //Se actualiza el array de peliculas en el localstorage
+        //Se actualiza el array de productos en el localstorage
         localStorage.setItem('productos',JSON.stringify(productos));
         showProductos();
         //Se limpian los inputs del formulario
@@ -111,9 +111,10 @@ function saveProducto(){
 }
 
 
-/*
-Function que permite cargar el formulario para editar un producto de acuedo al id del producto
-@param {number} productId id producto que se va a actualizar */
+/** 
+*Function que permite cargar el formulario para editar un producto de acuedo al id del producto
+*@param {number} productId id producto que se va a actualizar 
+*/
 
 function updateProducto(productId){
     let productos = JSON.parse(localStorage.getItem('productos'));
@@ -126,7 +127,7 @@ function updateProducto(productId){
         const inputMarca = document.querySelector('#marca');
         const inputPeso = document.querySelector('#peso');
         const inputCantidad = document.querySelector('#cantidad');  
-        //Se cargan los inputs con los valores de la pelicula encontrada
+        //Se cargan los inputs con los valores del producto encontrado
         inputId.value = productToUpdate.id;
         inputProducto.value = productToUpdate.producto;
         inputMarca.value = productToUpdate.marca;
@@ -136,8 +137,9 @@ function updateProducto(productId){
 }
 
 
-/* Function que permite eliminar una pelicula del array del localstorage de acuedo al indice del mismo
-@param {number} productId id producto que se va a eliminar
+/**  
+* Function que permite eliminar un producto del array del localstorage de acuedo al indice del mismo
+* @param {number} productId id producto que se va a eliminar
 */
 
 function deleteProducto(productId){
@@ -152,7 +154,7 @@ function deleteProducto(productId){
         showProductos();
         Swal.fire({
             title: 'Exito!',
-            text: 'La pelicula fue eliminada.',
+            text: 'El producto fue eliminada.',
             icon: 'success',
             confirmButtonText: 'Cerrar'
         })
