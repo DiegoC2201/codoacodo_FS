@@ -33,7 +33,9 @@ a {
 #servicios,
 #productos,
 #testimonios,
-#contacto {
+#contacto,
+#crud-stock,
+#tabla-inventario {
     background-image: url(##);
     background-size: cover;
     background-position: center;
@@ -66,6 +68,7 @@ a {
     display: flex;
     align-items: center;
     color: var(--primary-color);
+    width: 35%;
 }
 
 #logo>a {
@@ -95,6 +98,7 @@ nav>ul>li>a {
 
 nav>ul>li>a:hover {
     background-color: var(--secondary-color);
+    cursor: pointer;
 }
 
 .nav-oculta {
@@ -1016,31 +1020,28 @@ i {
     font-size: x-large;
 }
 
-/*CRUD*/
+/*CRUD*/    
+.search-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 .description-crud{
-    color: white;
-    margin: 20px 0px;
-}
-
-#form .d-flex-crud{
-    justify-content: space-around;
-    display: flex;
-    margin-bottom: 5vw;
-
-}
-
-.d-flex-column{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5vw;
+    color: var(--primary-color);
     font-weight: bold;
+    margin: 50px auto;
+    font-size: 1.5rem;
+}
+
+.atencion-crud{
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 50px auto;
 }
 
 .form-control-crud label{
-    color: #fafafa;
+    color: var(--secondary-color);
     padding-bottom: 10px;
-
 }
 
 .form-control-crud input {
@@ -1050,9 +1051,30 @@ i {
     border: 2px solid white;
     outline: none;
     border-radius: 25px;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 1rem;
     padding: 0 50px;
+}
+
+.d-flex-crud{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5vw;
+}
+
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5vw;
+    font-weight: bold;
+    width: 25%;
+    padding: 10px;
+}
+
+#btn-save-producto {
+    margin-top: 30px;
 }
 
 .button-eliminar, .button-editar{

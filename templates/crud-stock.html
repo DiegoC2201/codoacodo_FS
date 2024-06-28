@@ -32,28 +32,30 @@
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a onclick="location.href='./templates/crud-stock.html';">Crud Stock</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Indicar contenido principal de la pagina -->
     <main> 
-        <section id="form" class="container ">
-            <h2 class="search-title">Carrito</h2>
-            <p class="description-crud" >Añadir productos a su carrito de compras</p>
-            <form action="#"  id="form-carrito">
+        <section id="crud-stock" class="container">
+            <h2 class="search-title">Control de Stock</h2>
+            <p class="description-crud">Complete los datos del productos a ingresar:</p>
+            <p class="atencion-crud">Atencion: El campo precio debe tener el formato 15.00</p>
+            <form action=""  id="form-crud">
                 <div class="d-flex-crud">
                     <div class="form-control-crud d-flex-column">
-                        <label for="producto">Producto</label>
-                        <input type="text" class="input-search" name="producto" id="producto">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="input-search" name="nombre" id="nombre">
                     </div>
                     <div class="form-control-crud d-flex-column">
                         <label for="marca">Marca</label>
                         <input type="text" class="input-search" name="marca" id="marca">
                     </div>
                     <div class="form-control-crud d-flex-column">
-                        <label for="rating">Peso</label>
-                        <input type="number" class="input-search" name="peso" id="peso">
+                        <label for="precio">Precio</label>
+                        <input type="text" class="input-search" name="precio" id="precio">
                     </div>
                     <div class="form-control-crud d-flex-column">
                         <label for="cantidad">Cantidad</label>
@@ -63,19 +65,23 @@
                         <label for="banner">Imagen</label>
                         <input type="url" class="input-search" name="banner" id="banner-form">
                     </div>                 -->
-                    <input type="hidden"  name="id" id="id-producto">
-                    <button type="button" class="button" id="btn-save-producto">Agregar</button>
+                    <input type="hidden"  name="id_producto" id="id-producto">
+                    <div>
+                        <button type="button" class="button" id="btn-save-producto">Agregar</button>
+                    </div>
+                    
                 </div>
             </form> 
         </section>
-        <section id="carrito" class="container">
-            <h3 class="subtitulo">Productos en tu carrito</h3>
+        <section id="tabla-inventario" class="container">
+            <h3 class="subtitulo">Productos en el inventario</h3>
             <table id="list-table-products" class="table">
                 <thead>
                     <tr>
-                        <th>Producto</th>
+                        <th>Id Producto</th>
+                        <th>Nombre</th>
                         <th>Marca</th>
-                        <th>Peso</th>
+                        <th>Precio</th>
                         <th>Cantidad</th>                        
                         <!-- <th>Banner</th> -->
                         <th>Editar</th>
@@ -129,6 +135,6 @@
         </div> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../static/js/crud-carrito.js"></script>
+    <script src="../static/js/crud-stock-fetch.js"></script>
 </body>
 </html>

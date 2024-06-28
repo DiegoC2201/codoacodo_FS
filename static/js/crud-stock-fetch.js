@@ -24,7 +24,13 @@ async function fetchData(url, method, data=null) {
         return await response.json(); // Devuelve la respuesta en formato JSON
     } catch (error){
         console.error('Fetch error:', error);
-        alert('Ocurrió un error durante la carga de datos. Por favor intente nuevamente.')
+        Swal.fire({
+            title: 'Error!',
+            text: 'Ocurrió un error durante la carga de datos. Por favor intente nuevamente.',
+            icon: 'error',
+            confirmButtonText: 'Cerrar'
+        });
+        return; 
     }
 }
 
@@ -44,15 +50,16 @@ async function showProductos(){
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
                     <tr>
-                        <td>${product.producto}</td>
+                        <td>${product.id_producto}</td>
+                        <td>${product.nombre}</td>
                         <td>${product.marca}</td>
-                        <td>${product.peso}</td>
+                        <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
                         </td>
                         <td>
-                            <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id})'><i class="fa fa-trash" ></button></i>
+                            <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
                         </td>
                     </tr>
         `;
@@ -68,17 +75,19 @@ async function showProductos(){
 async function saveProducto(){
 
     //Obtengo el elemento HTML del formulario
-    const form = document.querySelector('#form-carrito');
+    const form = document.querySelector('#form-crud');
 
     //obtengo los inputs del formulario
-    const inputId = document.querySelector('#id-producto');
-    const inputProducto = document.querySelector('#producto');
-    const inputMarca = document.querySelector('#marca');
-    const inputPeso = document.querySelector('#peso');
-    const inputCantidad = document.querySelector('#cantidad');    
+    const inputId = document.querySelector('#id-producto').value;
+    const inputNombre = document.querySelector('#nombre').value;
+    const inputMarca = document.querySelector('#marca').value;
+    const inputPrecio = document.querySelector('#precio').value;
+    const inputCantidad = document.querySelector('#cantidad').value;    
 
-    //Realizo una validación simple de acuerdo al contenido del value del input del producto evitando campos vacíos o ceros
-    if(inputProducto.value.trim() == '' || inputMarca.value.trim() == '' || inputPeso.value.trim() < 1 || inputCantidad.value.trim() < 1){
+    console.log("INPUT ID", inputId);
+
+    //Realizo una validación simple de acuerdo al contenido del value del input del nombre del producto evitando campos vacíos o ceros
+    if(inputNombre.trim() == '' || inputMarca.trim() == '' || inputPrecio.trim() == '' || inputCantidad.trim() < 1){
 
         Swal.fire({
             title: 'Error!',
@@ -91,9 +100,9 @@ async function saveProducto(){
 
     // Crea un objeto con los datos del producto
     const productData = {
-        producto: inputProducto,
+        nombre: inputNombre,
         marca: inputMarca,
-        peso: inputPeso,
+        precio: inputPrecio,
         cantidad: inputCantidad,
     };
 
@@ -111,8 +120,7 @@ async function saveProducto(){
     form.reset();
     
     Swal.fire({
-        title: 'Exito!',
-        text: result.message,
+        title: 'Producto agregado exitosamente!',
         icon: 'success',
         confirmButtonText: 'Cerrar'
     })
@@ -128,7 +136,7 @@ async function saveProducto(){
 
 function deleteProducto(productId){
     Swal.fire({
-        title: "Esta seguro de eliminar el producto?",
+        title: "¿Está seguro que desea eliminar el producto seleccionado?",
         showCancelButton: true,
         confirmButtonText: "Eliminar",
     }).then(async (result) => {
@@ -136,8 +144,7 @@ function deleteProducto(productId){
             let response = await fetchData(`${BASEURL}/api/productos/${productId}`, 'DELETE');
             showProductos();
             Swal.fire({
-                title: 'Exito!',
-                text: 'El producto fue eliminada.',
+                title: 'El producto ha sido eliminado',
                 icon: 'success',
                 confirmButtonText: 'Cerrar'
             })
@@ -155,20 +162,17 @@ async function updateProducto(productId){
     let response = await fetchData(`${BASEURL}/api/productos/${productId}`, 'GET');
     //Se buscan los elementos HTML del input
     const inputId = document.querySelector('#id-producto');
-    const inputProducto = document.querySelector('#producto');
+    const inputNombre = document.querySelector('#nombre');
     const inputMarca = document.querySelector('#marca');
-    const inputPeso = document.querySelector('#peso');
+    const inputPrecio = document.querySelector('#precio');
     const inputCantidad = document.querySelector('#cantidad');  
     //Se cargan los inputs con los valores del producto encontrada
-    inputId.value = productToUpdate.id;
-    inputProducto.value = productToUpdate.producto;
-    inputMarca.value = productToUpdate.marca;
-    inputPeso.value = productToUpdate.peso;
-    inputCantidad.value = productToUpdate.cantidad;
+    inputId.value = response.id_producto;
+    inputNombre.value = response.nombre;
+    inputMarca.value = response.marca;
+    inputPrecio.value = response.precio;
+    inputCantidad.value = response.cantidad;
 }
-
-
-
 
 // NOS ASEGURAMOS QUE SE CARGUE EL CONTENIDO DE LA PAGINA EN EL DOM
 document.addEventListener('DOMContentLoaded',function(){
