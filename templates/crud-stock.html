@@ -43,7 +43,7 @@
             <h2 class="search-title">Control de Stock</h2>
             <p class="description-crud">Complete los datos del producto a ingresar:</p>
             <p class="atencion-crud">Atención: El campo precio debe tener el formato 15.00</p>
-            <form action="" id="form-crud">
+            <form name="form-crud" action=""  id="form-crud">
                 <div class="d-flex-crud">
                     <div class="form-control-crud d-flex-column">
                         <label for="nombre">Nombre</label>
@@ -63,13 +63,13 @@
                     </div>
                     <input type="hidden"  name="id_producto" id="id-producto">
                     <div>
-                        <button type="button" class="button" id="btn-save-producto">Agregar</button>
+                        <button type="button" class="button" id="btn-save-producto"><a href="#tabla-inventario">Guardar</a></button>
                     </div>
                     
                 </div>
             </form> 
         </section>
-        <section id="tabla-inventario" class="container">
+        <section name="tabla-inventario" id="tabla-inventario" class="container">
             <h3 class="subtitulo-crud">Productos en el inventario</h3>
             <table id="list-table-products" class="table">
                 <thead>
@@ -100,7 +100,7 @@
                     </div>
                     <input type="hidden"  name="id_producto" id="id-producto">
                     <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarNombre()'>Filtrar</button>
+                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarNombre()'><a href="#tabla-inventario">Filtrar</a></button>
                     </div>
                 </div>
             </form>
@@ -112,7 +112,7 @@
                     </div>
                     <input type="hidden"  name="id_producto" id="id-producto">
                     <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarMarca()'>Filtrar</button>
+                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarMarca()'><a href="#tabla-inventario">Filtrar</a></button>
                     </div>
                 </div>
             </form>
@@ -124,7 +124,7 @@
                     </div>
                     <input type="hidden"  name="id_producto" id="id-producto">
                     <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarPrecio()'>Filtrar</button>
+                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarPrecio()'><a href="#tabla-inventario">Filtrar</a></button>
                     </div>
                 </div>
             </form>
@@ -136,7 +136,7 @@
                     </div>
                     <input type="hidden"  name="id_producto" id="id-producto">
                     <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarCantidad()'>Filtrar</button>
+                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarCantidad()'><a href="#tabla-inventario">Filtrar</a></button>
                     </div>
                 </div>
             </form>
