@@ -174,7 +174,7 @@ async function updateProducto(productId){
     inputCantidad.value = response.cantidad;
 }
 
-* Función que me permite obtener el nombre a utilizarse como filtro para luego aplicar el mismo*/ 
+/* Función que me permite obtener el nombre a utilizarse como filtro para luego aplicar el mismo*/ 
 async function filtrarNombre(){
     //Obtengo el elemento HTML del formulario
     const inputNombre = document.querySelector('#filtro-nombre').value;
