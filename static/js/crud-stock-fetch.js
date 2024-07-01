@@ -56,7 +56,7 @@ async function showProductos(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -196,7 +196,7 @@ async function filtrarNombre(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -229,7 +229,7 @@ async function filtrarMarca(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -262,7 +262,7 @@ async function filtrarPrecio(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -295,7 +295,7 @@ async function filtrarCantidad(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
