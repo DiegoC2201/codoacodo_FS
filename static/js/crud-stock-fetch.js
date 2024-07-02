@@ -177,9 +177,9 @@ async function updateProducto(productId){
 /* Función que me permite obtener el nombre a utilizarse como filtro para luego aplicar el mismo*/ 
 async function filtrarNombre(){
     //Obtengo el elemento HTML del formulario
-    const inputNombre = document.querySelector('#filtro-nombre').value;
+    const inputNombre = document.querySelector('#filtro-nombre').value.trim().toLowerCase();
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
-    let response = await fetchData(`${BASEURL}/api/productos/${inputNombre}`, 'GET');
+    let response = await fetchData(`${BASEURL}/api/productos/${encodeURIComponent(inputNombre)}`, 'GET');
     //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
@@ -210,9 +210,9 @@ async function filtrarNombre(){
 /* Función que me permite obtener la marca a utilizarse como filtro para luego aplicar el mismo*/ 
 async function filtrarMarca(){
     //Obtengo el elemento HTML del formulario
-    const inputMarca = document.querySelector('#filtro-marca').value;
+    const inputMarca = document.querySelector('#filtro-marca').value.trim().toLowerCase();
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
-    let response = await fetchData(`${BASEURL}/api/marcas/${inputMarca}`, 'GET');
+    let response = await fetchData(`${BASEURL}/api/marcas/${encodeURIComponent(inputMarca)}`, 'GET');
     //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
