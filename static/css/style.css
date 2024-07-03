@@ -37,7 +37,8 @@ a {
 #testimonios,
 #contacto,
 #crud-stock,
-#tabla-inventario {
+#tabla-inventario,
+#filtros {
     background-image: url(##);
     background-size: cover;
     background-position: center;
@@ -1045,10 +1046,6 @@ i {
     padding: 10px 30px;
 }
 
-#btn-filtrar-producto {
-     margin-top: 30px;
-}
-
 .subtitulo-crud {
     text-align: center;
     font-size: 3vw;
@@ -1075,6 +1072,23 @@ i {
 .table th{
     border-bottom: 1px solid #ffffff;
 }
+
+#filtros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn-filtrar-producto {
+    margin-top: 30px;
+}
+    
+#btn-limpiar-filtros {
+    align-self: center;
+    width: 200px
+}
+
+
 
 /* MEDIA QUERIES */
 /* Tablets */
