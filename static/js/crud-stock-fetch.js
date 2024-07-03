@@ -1,4 +1,6 @@
-const BASEURL = 'http://127.0.0.1:5000';
+// const BASEURL = 'http://127.0.0.1:5000';
+
+const BASEURL = 'http://sramacbeth.pythonanywhere.com/';
 
 /**
  * Función para realizar una petición con fetch con JSON.
@@ -56,7 +58,7 @@ async function showProductos(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -174,18 +176,28 @@ async function updateProducto(productId){
     inputCantidad.value = response.cantidad;
 }
 
-* Función que me permite obtener el nombre a utilizarse como filtro para luego aplicar el mismo*/ 
+/* Función que me permite obtener el nombre a utilizarse como filtro para luego aplicar el mismo*/ 
 async function filtrarNombre(){
     //Obtengo el elemento HTML del formulario
-    const inputNombre = document.querySelector('#filtro-nombre').value;
+    const inputNombre = document.querySelector('#filtro-nombre').value.trim().toLowerCase();
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
-    let response = await fetchData(`${BASEURL}/api/productos/${inputNombre}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
+    let response = await fetchData(`${BASEURL}/api/productos/${encodeURIComponent(inputNombre)}`, 'GET');
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con el nombre buscado</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }
+
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -196,7 +208,7 @@ async function filtrarNombre(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -210,15 +222,24 @@ async function filtrarNombre(){
 /* Función que me permite obtener la marca a utilizarse como filtro para luego aplicar el mismo*/ 
 async function filtrarMarca(){
     //Obtengo el elemento HTML del formulario
-    const inputMarca = document.querySelector('#filtro-marca').value;
+    const inputMarca = document.querySelector('#filtro-marca').value.trim().toLowerCase();
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
-    let response = await fetchData(`${BASEURL}/api/marcas/${inputMarca}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
+    let response = await fetchData(`${BASEURL}/api/marcas/${encodeURIComponent(inputMarca)}`, 'GET');
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con la marca buscada</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -229,7 +250,7 @@ async function filtrarMarca(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -246,12 +267,22 @@ async function filtrarPrecio(){
     const inputPrecio = document.querySelector('#filtro-precio').value;
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
     let response = await fetchData(`${BASEURL}/api/precio/${inputPrecio}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con el precio ingresado</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }
+
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -262,7 +293,7 @@ async function filtrarPrecio(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -279,12 +310,21 @@ async function filtrarCantidad(){
     const inputCantidad= document.querySelector('#filtro-cantidad').value;
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
     let response = await fetchData(`${BASEURL}/api/cantidad/${inputCantidad}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con la cantidad ingresada</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }    
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -295,7 +335,7 @@ async function filtrarCantidad(){
                         <td>${product.precio}</td>
                         <td>${product.cantidad}</td>                        
                         <td>
-                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><i class="fa fa-pencil" ></button></i>
+                            <button type="button" class="button-editar" onclick='updateProducto(${product.id_producto})'><a href="#form-crud"><i class="fa fa-pencil" ></button></i></a>
                         </td>
                         <td>
                             <button type="button" class="button-eliminar" onclick='deleteProducto(${product.id_producto})'><i class="fa fa-trash" ></button></i>
@@ -306,6 +346,15 @@ async function filtrarCantidad(){
     });
 }
 
+function limpiarFiltros() {
+    //se vacian los inputs luego de la consulta
+    document.querySelector('#filtro-nombre').value = '';
+    document.querySelector('#filtro-marca').value = '';
+    document.querySelector('#filtro-precio').value = '';
+    document.querySelector('#filtro-cantidad').value = '';
+    //se muestran todos los productos del inventario
+    showProductos()
+}
 
 
 // NOS ASEGURAMOS QUE SE CARGUE EL CONTENIDO DE LA PAGINA EN EL DOM

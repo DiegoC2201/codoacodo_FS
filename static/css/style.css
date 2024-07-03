@@ -37,7 +37,8 @@ a {
 #testimonios,
 #contacto,
 #crud-stock,
-#tabla-inventario {
+#tabla-inventario,
+#filtros {
     background-image: url(##);
     background-size: cover;
     background-position: center;
@@ -982,14 +983,22 @@ i {
 
 /*CRUD*/    
 
+#crud-stock {
+    background-image: url(../img/comida-perro2.png);
+    background-size: cover;
+    background-position: center;
+} 
+
 .search-title {
+    font-size: 50px;
     text-align: center;
     margin-bottom: 30px;
 }
 
 .description-crud{
-    color: var(--primary-color);
+    color: var(--primary-color);    
     font-weight: bold;
+    text-align: center;
     margin: 50px auto;
     font-size: 1.5rem;
 }
@@ -997,7 +1006,14 @@ i {
 .atencion-crud{
     color: var(--primary-color);
     font-weight: bold;
-    margin: 50px auto;
+    margin: 30px auto;
+}
+
+#form-crud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-control-crud label{
@@ -1035,7 +1051,7 @@ i {
 }
 
 #btn-save-producto {
-     margin-top: 30px;
+    padding: 10px 30px;
 }
 
 .subtitulo-crud {
@@ -1064,6 +1080,23 @@ i {
 .table th{
     border-bottom: 1px solid #ffffff;
 }
+
+#filtros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn-filtrar-producto {
+    margin-top: 30px;
+}
+    
+#btn-limpiar-filtros {
+    align-self: center;
+    width: 200px
+}
+
+
 
 /* MEDIA QUERIES */
 /* Tablets */

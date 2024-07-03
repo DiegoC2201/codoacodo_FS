@@ -83,17 +83,17 @@ setInterval(function(){
 //se usa el "." cuando hacemos referencia a una clase
 //se usa el "#" cuando hacemos referencia a un id
 
-const parrafo = document.querySelector("#nota");
+// const parrafo = document.querySelector("#nota");
     
-function addNote() {
-    // la funcion verifica que elemento parrafo se encuentre en el DOM
-    if (parrafo) {
-        parrafo.innerHTML = "A la espera de aprender <br>carga dinámica de datos con JS";
-        console.log('Nota agregada');
-    } else {
-        console.error('El elemento #nota no se encuentra en el DOM');
-    }
-}
+// function addNote() {
+//     // la funcion verifica que elemento parrafo se encuentre en el DOM
+//     if (parrafo) {
+//         parrafo.innerHTML = "A la espera de aprender <br>carga dinámica de datos con JS";
+//         console.log('Nota agregada');
+//     } else {
+//         console.error('El elemento #nota no se encuentra en el DOM');
+//     }
+// }
 
 //const enlace =  document.querySelector(".pendiente");
 //enlace.addEventListener("click", addNote);
