@@ -1016,6 +1016,13 @@ i {
     align-items: center;
 }
 
+#form-crud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .form-control-crud label{
     color: var(--secondary-color);
     padding-bottom: 10px;
