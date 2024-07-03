@@ -122,7 +122,7 @@ async function saveProducto(){
     form.reset();
     
     Swal.fire({
-        title: 'Producto agregado exitosamente!',
+        title: 'Producto guardado exitosamente!',
         icon: 'success',
         confirmButtonText: 'Cerrar'
     })
