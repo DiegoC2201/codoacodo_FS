@@ -217,8 +217,6 @@ async function filtrarNombre(){
         `;
         tbodyProductos.insertAdjacentHTML('beforeend',tr);
     });
-    //se vacia el input luego de la consulta
-    document.querySelector('#filtro-nombre').value = '';
 }
 
 /* Función que me permite obtener la marca a utilizarse como filtro para luego aplicar el mismo*/ 
@@ -261,8 +259,6 @@ async function filtrarMarca(){
         `;
         tbodyProductos.insertAdjacentHTML('beforeend',tr);
     });
-    //se vacia el input luego de la consulta
-    document.querySelector('#filtro-marca').value = '';
 }
 
 /* Función que me permite obtener el precio a utilizar como filtro para luego aplicar el mismo*/ 
@@ -306,8 +302,6 @@ async function filtrarPrecio(){
         `;
         tbodyProductos.insertAdjacentHTML('beforeend',tr);
     });
-    //se vacia el input luego de la consulta
-    document.querySelector('#filtro-precio').value = '';
 }
 
 /* Función que me permite obtener la cantidad en stock a utilizar como filtro para luego aplicar el mismo*/ 
@@ -350,10 +344,17 @@ async function filtrarCantidad(){
         `;
         tbodyProductos.insertAdjacentHTML('beforeend',tr);
     });
-    //se vacia el input luego de la consulta
-    document.querySelector('#filtro-cantidad').value = '';
 }
 
+function limpiarFiltros() {
+    //se vacian los inputs luego de la consulta
+    document.querySelector('#filtro-nombre').value = '';
+    document.querySelector('#filtro-marca').value = '';
+    document.querySelector('#filtro-precio').value = '';
+    document.querySelector('#filtro-cantidad').value = '';
+    //se muestran todos los productos del inventario
+    showProductos()
+}
 
 
 // NOS ASEGURAMOS QUE SE CARGUE EL CONTENIDO DE LA PAGINA EN EL DOM
