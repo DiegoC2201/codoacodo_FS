@@ -42,7 +42,7 @@
         <section id="crud-stock" class="container">
             <h2 class="search-title">Control de Stock</h2>
             <p class="description-crud">Complete los datos del producto a ingresar:</p>
-            <p class="atencion-crud">Atención: El campo precio debe tener el formato 15.00</p>
+            <!-- <p class="atencion-crud">Atención: El campo precio debe tener el formato 15.00</p> -->
             <form action="" id="form-crud">
                 <div class="d-flex-crud">
                     <div class="form-control-crud d-flex-column">
@@ -87,56 +87,57 @@
             </table>
         </section> 
         <section id="filtros">
-            <h2 class="search-title">Filtros:</h2>
-            <form action="">
-                <div  class="d-flex-crud">
-                    <div class="form-control-crud d-flex-column">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="input-search" name="filtro-nombre" id="filtro-nombre">
+                <h2 class="search-title">Filtros:</h2>
+                <form action="">
+                    <div  class="d-flex-crud">
+                        <div class="form-control-crud d-flex-column">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="input-search" name="filtro-nombre" id="filtro-nombre">
+                        </div>
+                        <input type="hidden"  name="id_producto" id="id-producto">
+                        <div>
+                            <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarNombre()'><a href="#tabla-inventario">Filtrar</a></button>
+                        </div>
                     </div>
-                    <input type="hidden"  name="id_producto" id="id-producto">
-                    <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarNombre()'><a href="#tabla-inventario">Filtrar</a></button>
+                </form>
+                <form action="">
+                    <div  class="d-flex-crud">
+                        <div class="form-control-crud d-flex-column">
+                            <label for="marca">Marca</label>
+                            <input type="text" class="input-search" name="filtro-marca" id="filtro-marca">
+                        </div>
+                        <input type="hidden"  name="id_producto" id="id-producto">
+                        <div>
+                            <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarMarca()'><a href="#tabla-inventario">Filtrar</a></button>
+                        </div>
                     </div>
-                </div>
-            </form>
-            <form action="">
-                <div  class="d-flex-crud">
-                    <div class="form-control-crud d-flex-column">
-                        <label for="marca">Marca</label>
-                        <input type="text" class="input-search" name="filtro-marca" id="filtro-marca">
+                </form>
+                <form action="">
+                    <div  class="d-flex-crud">
+                        <div class="form-control-crud d-flex-column">
+                            <label for="precio">Precio hasta:</label>
+                            <input type="text" class="input-search" name="filtro-precio" id="filtro-precio">
+                        </div>
+                        <input type="hidden"  name="id_producto" id="id-producto">
+                        <div>
+                            <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarPrecio()'><a href="#tabla-inventario">Filtrar</a></button>
+                        </div>
                     </div>
-                    <input type="hidden"  name="id_producto" id="id-producto">
-                    <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarMarca()'><a href="#tabla-inventario">Filtrar</a></button>
+                </form>
+                <form action="">
+                    <div  class="d-flex-crud">
+                        <div class="form-control-crud d-flex-column">
+                            <label for="cantidad">Existencias menores a:</label>
+                            <input type="number" class="input-search" name="filtro-cantidad" id="filtro-cantidad">
+                        </div>
+                        <input type="hidden"  name="id_producto" id="id-producto">
+                        <div>
+                            <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarCantidad()'><a href="#tabla-inventario">Filtrar</a></button>
+                        </div>
                     </div>
-                </div>
-            </form>
-            <form action="">
-                <div  class="d-flex-crud">
-                    <div class="form-control-crud d-flex-column">
-                        <label for="precio">Precio hasta:</label>
-                        <input type="text" class="input-search" name="filtro-precio" id="filtro-precio">
-                    </div>
-                    <input type="hidden"  name="id_producto" id="id-producto">
-                    <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarPrecio()'><a href="#tabla-inventario">Filtrar</a></button>
-                    </div>
-                </div>
-            </form>
-            <form action="">
-                <div  class="d-flex-crud">
-                    <div class="form-control-crud d-flex-column">
-                        <label for="cantidad">Existencias menores a:</label>
-                        <input type="number" class="input-search" name="filtro-cantidad" id="filtro-cantidad">
-                    </div>
-                    <input type="hidden"  name="id_producto" id="id-producto">
-                    <div>
-                        <button type="button" class="button" id="btn-filtrar-producto" onclick='filtrarCantidad()'><a href="#tabla-inventario">Filtrar</a></button>
-                    </div>
-                </div>
-            </form>
-            <button type="button" class="button" id="btn-limpiar-filtros" onclick="limpiarFiltros()">Limpiar filtros</button>
+                </form>
+                <button type="button" class="button" id="btn-limpiar-filtros" onclick="limpiarFiltros()">Limpiar filtros</button>
+
         </section>
         
     </main>

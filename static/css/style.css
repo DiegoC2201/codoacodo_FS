@@ -1094,6 +1094,13 @@ i {
     justify-content: center;
 }
 
+/* #contenedor-filtros{
+    background-color: red;
+    align-items: center;
+    width:800px;
+
+} */
+
 #btn-filtrar-producto {
     margin-top: 30px;
 }
