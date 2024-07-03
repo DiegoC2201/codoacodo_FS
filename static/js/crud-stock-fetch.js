@@ -1,6 +1,6 @@
-/* const BASEURL = 'http://127.0.0.1:5000';
- */
-const BASEURL = 'http://sramacbeth.pythonanywhere.com/';
+const BASEURL = 'http://127.0.0.1:5000';
+
+/* const BASEURL = 'http://sramacbeth.pythonanywhere.com/'; */
 
 /**
  * Función para realizar una petición con fetch con JSON.
@@ -182,12 +182,22 @@ async function filtrarNombre(){
     const inputNombre = document.querySelector('#filtro-nombre').value.trim().toLowerCase();
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
     let response = await fetchData(`${BASEURL}/api/productos/${encodeURIComponent(inputNombre)}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con el nombre buscado</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }
+
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -215,12 +225,21 @@ async function filtrarMarca(){
     const inputMarca = document.querySelector('#filtro-marca').value.trim().toLowerCase();
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
     let response = await fetchData(`${BASEURL}/api/marcas/${encodeURIComponent(inputMarca)}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con la marca buscada</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -248,12 +267,22 @@ async function filtrarPrecio(){
     const inputPrecio = document.querySelector('#filtro-precio').value;
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
     let response = await fetchData(`${BASEURL}/api/precio/${inputPrecio}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con el precio ingresado</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }
+
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
@@ -281,12 +310,21 @@ async function filtrarCantidad(){
     const inputCantidad= document.querySelector('#filtro-cantidad').value;
     //Buscamos en el servidor el o los produtos de acuerdo al nombre
     let response = await fetchData(`${BASEURL}/api/cantidad/${inputCantidad}`, 'GET');
-    //Dibujo la nueva tabla solo con los productos de response
     
     //buscar elemento HTML donde quiero insertar los productos
     const tbodyProductos = document.querySelector('#list-table-products tbody');
     //limpio el contenido de la tabla
     tbodyProductos.innerHTML = '';
+    //Si no hay resultados que coincidan con la busqueda
+    if (response.length === 0) {
+        const tr = `
+                    <tr>
+                        <td colspan=7>No se encontraron productos con la cantidad ingresada</td>
+                    </tr>
+        `;
+        tbodyProductos.insertAdjacentHTML('beforeend',tr);
+    }    
+    //Dibujo la nueva tabla solo con los productos de response
     response.forEach((product) => {
         //TEMPLATE STRING - TEMPLATE LITERAL 
         const tr = `
